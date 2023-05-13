@@ -1,0 +1,135 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/rebellion/11.html"; next_location = "../../levels/rebellion/12.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+In order to avoid enemy forces, the army keeps going underground for as long as possible. The passage continues much longer than anyone expected. After fifty kilometers underground, you enter a dark room, with more rooms beyond. You climb up to the top of the tower in the dark and you reach the top of the room. There, everything becomes clear. Many corpses of men lie on the ground, all from a battle which you suddenly remember - the battle against Lord Xandros. Suddenly, you hear noises. Two men enter. Once archer sees their uniform and shoots one, but the other escapes to call for reinforcements. You have unwittingly stumbled into Madrina's stronghold.
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1}
+archer {'side':1,'aitype':1,'damage':11,'health':50,'range':50,'image':'Archer.png','speed':0.067,'inacc':2}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':3.2,'image':'Pikeman.png','speed':0.1,'cmult':0.5}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':3.2,'image':'Pikeman2.png','speed':0.1,'cmult':0.5}
+##events##
+setup 0 0 15 16
+unit soldier 1.5 1.5
+unit soldier 1.5 2.5
+unit soldier 1.5 3.5
+unit soldier 1.5 4.5
+unit soldier 1.5 5.5
+unit soldier 1.5 6.5
+unit soldier 2.5 1.5
+unit soldier 2.5 2.5
+unit soldier 2.5 3.5
+unit soldier 2.5 4.5
+unit soldier 2.5 5.5
+unit soldier 2.5 6.5
+unit pikeman 3.5 1.5
+unit pikeman 3.5 2.5
+unit pikeman 3.5 3.5
+unit pikeman 4.5 1.5
+unit pikeman 4.5 2.5
+unit pikeman 4.5 3.5
+unit archer 3.5 4.5
+unit archer 3.5 5.5
+unit archer 3.5 6.5
+unit archer 4.5 4.5
+unit archer 4.5 5.5
+unit archer 4.5 6.5
+unit enemysoldier 28.666 10.666
+unit enemysoldier 28.666 11.666
+unit enemysoldier 28.666 12.666
+unit enemysoldier 28.666 13.666
+unit enemysoldier 29.666 10.666
+unit enemysoldier 29.666 11.666
+unit enemysoldier 29.666 12.666
+unit enemysoldier 29.666 13.666
+unit enemypikeman 30.666 10.666
+unit enemypikeman 30.666 11.666
+unit enemypikeman 30.666 12.666
+unit enemypikeman 30.666 13.666
+unit enemypikeman 31.666 10.666
+unit enemypikeman 31.666 11.666
+unit enemypikeman 31.666 12.666
+unit enemypikeman 31.666 13.666
+unit enemysoldier 15.333 24
+unit enemysoldier 15.333 25
+unit enemysoldier 15.333 26
+unit enemysoldier 15.333 27
+unit enemysoldier 16.333 24
+unit enemysoldier 16.333 25
+unit enemysoldier 16.333 26
+unit enemysoldier 16.333 27
+unit enemypikeman 17.333 24
+unit enemypikeman 17.333 25
+unit enemypikeman 17.333 26
+unit enemypikeman 17.333 27
+unit enemypikeman 18.333 24
+unit enemypikeman 18.333 25
+unit enemypikeman 18.333 26
+unit enemypikeman 18.333 27
+whenever 200t do unit enemysoldier 35.333 24
+whenever 200t do unit enemysoldier 35.333 25
+whenever 200t do unit enemysoldier 35.333 26
+whenever 200t do unit enemysoldier 35.333 27
+whenever 200t do unit enemysoldier 36.333 24
+whenever 200t do unit enemysoldier 36.333 25
+whenever 200t do unit enemysoldier 36.333 26
+whenever 200t do unit enemysoldier 36.333 27
+whenever 200t do unit enemypikeman 37.333 24
+whenever 200t do unit enemypikeman 37.333 25
+whenever 200t do unit enemypikeman 37.333 26
+whenever 200t do unit enemypikeman 37.333 27
+whenever 200t do unit enemypikeman 38.333 24
+whenever 200t do unit enemypikeman 38.333 25
+whenever 200t do unit enemypikeman 38.333 26
+whenever 200t do unit enemypikeman 38.333 27
+whenever 400t do unit enemysoldier 2 24
+whenever 400t do unit enemysoldier 2 25
+whenever 400t do unit enemysoldier 2 26
+whenever 400t do unit enemysoldier 2 27
+whenever 400t do unit enemysoldier 3 24
+whenever 400t do unit enemysoldier 3 25
+whenever 400t do unit enemysoldier 3 26
+whenever 400t do unit enemysoldier 3 27
+whenever 400t do unit enemypikeman 4 24
+whenever 400t do unit enemypikeman 4 25
+whenever 400t do unit enemypikeman 4 26
+whenever 400t do unit enemypikeman 4 27
+whenever 400t do unit enemypikeman 5 24
+whenever 400t do unit enemypikeman 5 25
+whenever 400t do unit enemypikeman 5 26
+whenever 400t do unit enemypikeman 5 27
+##terrain##
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0], [0, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 0, 0, 40, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 0, 0, 40, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 0, 0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0], [0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

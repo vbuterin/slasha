@@ -1,0 +1,171 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/foundation/6.html"; next_location = "../../levels/foundation/7.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+After three weeks of marching through the plains, you are once again assaulted by an enemy army. This time, however, you have one advantage: cavalry.
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1,'desc':'friendly'}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5,'desc':'friendly'}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.1,'cmult':0.5}
+horseman {'side':1,'aitype':1,'damage':11,'health':60,'range':2.5,'image':'Horseman.png','speed':0.2,'cmult':1,'bmult':0.5}
+##events##
+setup 26.666 0 40 30
+unit soldier 31 1
+unit soldier 31 2.333
+unit soldier 31 3.666
+unit soldier 31 5
+unit soldier 31 6.333
+unit soldier 31 7.666
+unit soldier 31 9
+unit soldier 31 10.333
+unit soldier 31 11.666
+unit soldier 31 13
+unit soldier 31 14.333
+unit soldier 31 15.666
+unit soldier 31 17
+unit soldier 31 18.333
+unit soldier 31 19.666
+unit soldier 31 21
+unit soldier 31 22.333
+unit soldier 31 23.666
+unit soldier 31 25
+unit soldier 31 26.333
+unit soldier 31 27.666
+unit soldier 31 29
+unit pikeman 32 1 c$0.5
+unit pikeman 32 2.333 c$0.5
+unit pikeman 32 3.666 c$0.5
+unit pikeman 32 5 c$0.5
+unit pikeman 32 6.333 c$0.5
+unit pikeman 32 7.666 c$0.5
+unit pikeman 32 9 c$0.5
+unit pikeman 32 10.333 c$0.5
+unit pikeman 32 11.666 c$0.5
+unit pikeman 32 13 c$0.5
+unit pikeman 32 14.333 c$0.5
+unit pikeman 32 15.666 c$0.5
+unit pikeman 32 17 c$0.5
+unit pikeman 32 18.333 c$0.5
+unit pikeman 32 19.666 c$0.5
+unit pikeman 32 21 c$0.5
+unit pikeman 32 22.333 c$0.5
+unit pikeman 32 23.666 c$0.5
+unit pikeman 32 25 c$0.5
+unit pikeman 32 26.333 c$0.5
+unit pikeman 32 27.666 c$0.5
+unit pikeman 32 29 c$0.5
+unit horseman 37.666 1
+unit horseman 37.666 3
+unit horseman 37.666 5
+unit horseman 37.666 7
+unit horseman 37.666 9
+unit horseman 37.666 11
+unit horseman 37.666 13
+unit horseman 37.666 15
+unit horseman 37.666 17
+unit horseman 37.666 19
+unit horseman 37.666 21
+unit horseman 37.666 23
+unit horseman 37.666 25
+unit horseman 37.666 27
+unit horseman 37.666 29
+unit enemysoldier 16 2.333
+unit enemysoldier 16 3.666
+unit enemysoldier 16 5
+unit enemysoldier 16 6.333
+unit enemysoldier 16 7.666
+unit enemysoldier 16 9
+unit enemysoldier 16 10.333
+unit enemysoldier 16 11.666
+unit enemysoldier 16 13
+unit enemysoldier 16 14.333
+unit enemysoldier 16 15.666
+unit enemysoldier 16 17
+unit enemysoldier 16 18.333
+unit enemysoldier 16 19.666
+unit enemysoldier 16 21
+unit enemysoldier 16 22.333
+unit enemysoldier 16 23.666
+unit enemysoldier 16 25
+unit enemysoldier 16 26.333
+unit enemysoldier 16 27.666
+unit enemysoldier 16 29
+unit enemypikeman 15 1 c$0.5
+unit enemypikeman 15 2.333 c$0.5
+unit enemypikeman 15 3.666 c$0.5
+unit enemypikeman 15 5 c$0.5
+unit enemypikeman 15 6.333 c$0.5
+unit enemypikeman 15 7.666 c$0.5
+unit enemypikeman 15 9 c$0.5
+unit enemypikeman 15 10.333 c$0.5
+unit enemypikeman 15 11.666 c$0.5
+unit enemypikeman 15 13 c$0.5
+unit enemypikeman 15 14.333 c$0.5
+unit enemypikeman 15 15.666 c$0.5
+unit enemypikeman 15 17 c$0.5
+unit enemypikeman 15 18.333 c$0.5
+unit enemypikeman 15 19.666 c$0.5
+unit enemypikeman 15 21 c$0.5
+unit enemypikeman 15 22.333 c$0.5
+unit enemypikeman 15 23.666 c$0.5
+unit enemypikeman 15 25 c$0.5
+unit enemypikeman 15 26.333 c$0.5
+unit enemypikeman 15 27.666 c$0.5
+unit enemypikeman 15 29 c$0.5
+unit enemypikeman 14 1 c$0.5
+unit enemypikeman 14 2.333 c$0.5
+unit enemypikeman 14 3.666 c$0.5
+unit enemypikeman 14 5 c$0.5
+unit enemypikeman 14 6.333 c$0.5
+unit enemypikeman 14 7.666 c$0.5
+unit enemypikeman 14 9 c$0.5
+unit enemypikeman 14 10.333 c$0.5
+unit enemypikeman 14 11.666 c$0.5
+unit enemypikeman 14 13 c$0.5
+unit enemypikeman 14 14.333 c$0.5
+unit enemypikeman 14 15.666 c$0.5
+unit enemypikeman 14 17 c$0.5
+unit enemypikeman 14 18.333 c$0.5
+unit enemypikeman 14 19.666 c$0.5
+unit enemypikeman 14 21 c$0.5
+unit enemypikeman 14 22.333 c$0.5
+unit enemypikeman 14 23.666 c$0.5
+unit enemypikeman 14 25 c$0.5
+unit enemypikeman 14 26.333 c$0.5
+unit enemypikeman 14 27.666 c$0.5
+unit enemypikeman 14 29 c$0.5
+##terrain##
+[[40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

@@ -1,0 +1,95 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/rebellion/0.html"; next_location = "../../levels/rebellion/1.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+At first, after Queen Madrina's reign everyone was happy and the economy and the arts prospered, with no immediate enemies to fight. However, as time passed the government became more restrictive, taking away freedoms one by one and arbitrarily arresting people. The excuse given was the Sabayon terrorist movement. Soldiers were sent against them, but suspiciously in every battle all the soldiers died, with their bodies nowhere to be found. As time passed, this gradually got worse. You, the brave commander, realize what's going on and round up a small army of loyal soldiers and civilians to resist. The crackdown is brutal...
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1}
+archer {'side':1,'aitype':1,'damage':6,'health':50,'range':50,'image':'Archer.png','speed':0.08,'bmult':0.95}
+enemyarcher {'side':0,'aitype':0,'damage':6,'health':50,'range':50,'image':'Archer2.png','speed':0.08,'bmult':0.95}
+peasant {'side':1,'aitype':1,'damage':5,'health':50,'range':1.6,'image':'Peasant.png','speed':0.1}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5}
+zombie {'side':0,'aitype':0,'damage':4,'health':50,'range':1.6,'image':'Peasant.png','speed':0.1}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.1,'cmult':0.5}
+catapult {'side':0,'aitype':0,'damage':19,'health':50,'range':50,'image':'Catapult.png','speed':0}
+##events##
+setup 20 0 40 30
+unit soldier 34.666 9.733
+unit soldier 34.666 12.533
+unit soldier 34.666 15.333
+unit pikeman 34.666 1.333 c$0.5
+unit pikeman 34.666 4.133 c$0.5
+unit pikeman 34.666 6.933 c$0.5
+unit enemysoldier 2.333 1.333
+unit enemysoldier 2.333 3.333
+unit enemysoldier 2.333 5.333
+unit enemysoldier 2.333 7.333
+unit enemysoldier 2.333 9.333
+unit enemysoldier 2.333 11.333
+unit enemysoldier 2.333 13.333
+unit enemysoldier 2.333 15.333
+unit enemypikeman 1.333 2.333 c$0.5
+unit enemypikeman 1.333 4.333 c$0.5
+unit enemypikeman 1.333 6.333 c$0.5
+unit enemypikeman 1.333 8.333 c$0.5
+unit enemypikeman 1.333 10.333 c$0.5
+unit enemypikeman 1.333 12.333 c$0.5
+unit enemypikeman 1.333 14.333 c$0.5
+unit enemypikeman 1.333 16.333 c$0.5
+unit peasant 37.333 1.333
+unit peasant 37.333 2.333
+unit peasant 37.333 3.333
+unit peasant 37.333 4.333
+unit peasant 37.333 5.333
+unit peasant 37.333 6.333
+unit peasant 37.333 7.333
+unit peasant 37.333 8.333
+unit peasant 37.333 9.333
+unit peasant 37.333 10.333
+unit peasant 37.333 11.333
+unit peasant 37.333 12.333
+unit peasant 37.333 13.333
+unit peasant 37.333 14.333
+unit peasant 37.333 15.333
+unit peasant 36 2.333
+unit peasant 36 4.333
+unit peasant 36 6.333
+unit peasant 36 8.333
+unit peasant 36 10.333
+unit peasant 36 12.333
+unit peasant 36 14.333
+##terrain##
+[[18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18], [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18], [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18], [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18], [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18], [0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22], [22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22], [22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22], [22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22], [22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22], [0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24], [0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24], [0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24], [0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24], [0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24, 0, 0, 0, 0, 0, 24, 24, 24, 24, 24], [26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26], [26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26], [26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26], [26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26], [26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26], [0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28], [0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28], [0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28], [0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28], [0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28], [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30], [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30], [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30], [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30], [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30], [32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

@@ -1,0 +1,148 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/foundation/8.html"; next_location = "../../levels/foundation/9.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+Bolstered by released slaves, your army grows to a size larger than the one you left Lindra with. How, the empire has caught on, and has ordered the execution of all slaves in a 20 mile radius to stop you from gathering more troops. Their main army is moving in to surround you. You decide to move quickly and ambush their vanguard, but your plan is suddenly interrupted by the arrival of another army. The nation that captured Lindra has been following you the whole time, and now they've caught up...
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1}
+darkknight {'side':2,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier3.png','speed':0.1}
+archer {'side':1,'aitype':1,'damage':5,'health':40,'range':50,'image':'Archer.png','speed':0.067,'inacc':2}
+enemyarcher {'side':0,'aitype':0,'damage':5,'health':40,'range':50,'image':'Archer2.png','speed':0.067,'inacc':2}
+warlock {'side':2,'aitype':0,'damage':5,'health':40,'range':50,'image':'Mage3.png','speed':0.067,'inacc':2}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.1,'cmult':0.5}
+darkpikeman {'side':2,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman3.png','speed':0.1,'cmult':0.5}
+horseman {'side':1,'aitype':1,'damage':11,'health':60,'range':2.5,'image':'Horseman.png','speed':0.2,'cmult':1,'bmult':0.5}
+##events##
+setup 0 23.666 14 30
+unit soldier 1 26.666
+unit soldier 2 26.666
+unit soldier 3 26.666
+unit soldier 4 26.666
+unit soldier 5 26.666
+unit soldier 6 26.666
+unit soldier 7 26.666
+unit soldier 8 26.666
+unit pikeman 1 27.666 c$0.5
+unit pikeman 2 27.666 c$0.5
+unit pikeman 3 27.666 c$0.5
+unit pikeman 4 27.666 c$0.5
+unit pikeman 5 27.666 c$0.5
+unit pikeman 6 27.666 c$0.5
+unit pikeman 7 27.666 c$0.5
+unit pikeman 8 27.666 c$0.5
+unit archer 1 28.666 b$0.95
+unit archer 2 28.666 b$0.95
+unit archer 3 28.666 b$0.95
+unit archer 4 28.666 b$0.95
+unit archer 5 28.666 b$0.95
+unit archer 6 28.666 b$0.95
+unit archer 7 28.666 b$0.95
+unit archer 8 28.666 b$0.95
+unit horseman 1 29.666
+unit horseman 2 29.666
+unit horseman 3 29.666
+unit horseman 4 29.666
+unit horseman 5 29.666
+unit horseman 6 29.666
+unit horseman 7 29.666
+unit horseman 8 29.666
+unit enemysoldier 39.333 7
+unit enemypikeman 39.333 8 c$0.5
+unit enemyarcher 39.333 9 b$0.95
+unit enemysoldier 39.333 10
+unit enemypikeman 39.333 11 c$0.5
+unit enemyarcher 39.333 12 b$0.95
+unit enemysoldier 39.333 13
+unit enemypikeman 39.333 14 c$0.5
+unit enemyarcher 39.333 15 b$0.95
+unit enemysoldier 39.333 16
+unit enemypikeman 39.333 17 c$0.5
+unit enemyarcher 39.333 18 b$0.95
+unit enemysoldier 39.333 19
+unit enemypikeman 39.333 20 c$0.5
+unit enemyarcher 39.333 21 b$0.95
+unit enemysoldier 39.333 22
+unit enemypikeman 39.333 23 c$0.5
+when 225t do unit darkknight 0.666 7
+when 225t do unit darkpikeman 0.666 8 c$0.5
+when 225t do unit warlock 0.666 9 b$0.95
+when 225t do unit darkknight 0.666 10
+when 225t do unit darkpikeman 0.666 11 c$0.5
+when 225t do unit warlock 0.666 12 b$0.95
+when 225t do unit darkknight 0.666 13
+when 225t do unit darkpikeman 0.666 14 c$0.5
+when 225t do unit warlock 0.666 15 b$0.95
+when 225t do unit darkknight 0.666 16
+when 225t do unit darkpikeman 0.666 17 c$0.5
+when 225t do unit warlock 0.666 18 b$0.95
+when 225t do unit darkknight 0.666 19
+when 225t do unit darkpikeman 0.666 20 c$0.5
+when 225t do unit warlock 0.666 21 b$0.95
+when 225t do unit darkknight 0.666 22
+when 225t do unit darkpikeman 0.666 23 c$0.5
+when 450t do unit enemysoldier 13 0.666
+when 450t do unit enemysoldier 14 0.666 c$0.5
+when 450t do unit enemysoldier 15 0.666 b$0.95
+when 450t do unit enemysoldier 16 0.666
+when 450t do unit enemysoldier 17 0.666 c$0.5
+when 450t do unit enemysoldier 18 0.666 b$0.95
+when 450t do unit enemysoldier 19 0.666
+when 450t do unit enemysoldier 20 0.666 c$0.5
+when 450t do unit enemysoldier 21 0.666 b$0.95
+when 450t do unit enemysoldier 22 0.666
+when 450t do unit enemysoldier 23 0.666 c$0.5
+when 450t do unit enemysoldier 24 0.666 b$0.95
+when 450t do unit enemysoldier 25 0.666
+when 450t do unit enemysoldier 26 0.666 c$0.5
+when 450t do unit enemysoldier 27 0.666 b$0.95
+when 450t do unit darkknight 13 29.333
+when 450t do unit darkpikeman 14 29.333 c$0.5
+when 450t do unit warlock 15 29.333 b$0.95
+when 450t do unit darkknight 16 29.333
+when 450t do unit darkpikeman 17 29.333 c$0.5
+when 450t do unit warlock 18 29.333 b$0.95
+when 450t do unit darkknight 19 29.333
+when 450t do unit darkpikeman 20 29.333 c$0.5
+when 450t do unit warlock 21 29.333 b$0.95
+when 450t do unit darkknight 22 29.333
+when 450t do unit darkpikeman 23 29.333 c$0.5
+when 450t do unit warlock 24 29.333 b$0.95
+when 450t do unit darkknight 25 29.333
+when 450t do unit darkpikeman 26 29.333 c$0.5
+when 450t do unit warlock 27 29.333 b$0.95
+##terrain##
+[[61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 0, 0, 0, 0, 0, 0, 61, 61, 61, 61, 0, 0, 0, 0, 61, 61, 61, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 0, 71, 71, 71, 71, 0, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 0, 71, 71, 71, 71, 0, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 51, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 0, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 71, 71, 71, 71, 71, 71, 71, 0, 51, 0, 61, 61, 0, 61, 61, 61], [61, 61, 61, 0, 71, 71, 71, 71, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61, 0, 0, 51, 51, 51, 61, 61, 61, 61, 61, 61], [61, 61, 61, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 51, 0, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 0, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [71, 71, 71, 61, 61, 61, 61, 61, 61, 61, 61, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 0, 0, 0, 61, 61], [71, 71, 71, 61, 61, 61, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 0, 61, 61, 0, 0, 61, 61], [71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 51, 0, 61, 61], [71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 0, 61, 51, 0, 61, 61], [71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 51, 51, 61, 61], [71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 0, 51, 61, 61], [71, 71, 71, 71, 0, 51, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 0, 61, 61, 0, 51, 61, 61], [71, 0, 71, 71, 51, 51, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [71, 71, 71, 0, 51, 0, 61, 61, 61, 61, 0, 0, 0, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [71, 71, 71, 0, 51, 51, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [71, 71, 71, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 0, 0, 0, 0, 61, 61, 0, 0, 61, 61, 0, 0, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 0, 61, 61, 61, 61, 61, 61, 61, 61, 71, 71, 71, 71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61], [0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 71, 71, 71, 71, 71, 71, 71, 71, 61, 61, 61, 61, 61, 61], [71, 71, 71, 71, 71, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 71, 71, 71, 71, 71, 71, 71, 71, 71, 61, 0, 61, 61, 61, 61], [71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 61, 0, 61, 0, 0, 71, 0, 0, 0, 0, 0, 0, 61, 51, 51, 61, 61, 61], [71, 71, 71, 71, 0, 51, 51, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 61, 61, 61, 61, 61, 61, 61, 51, 0, 61, 61, 61], [71, 71, 71, 71, 71, 51, 51, 61, 61, 61, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [71, 71, 71, 71, 71, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

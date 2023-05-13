@@ -1,0 +1,95 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/rebellion/13.html"; next_location = "../../levels/rebellion/14.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+You wait quietly while Madrina's army fights the golems. These giants shut down when Madrina left the tower with the crystal of Xubuntu after the battle many years ago. After a few hours, the army is losing. You see from the window a group of people fleeing the tower, condemning the remaining soldiers to death. However, almost immediately the golems shut down. Soon, the soldiers will be back in control. Realizing the danger, you flee back into the tunnels, this time with a map. According to the map, there is a nearly finished tunnel heading directly into Faladare. You must get there before she does.
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.06}
+darkknight {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier3.png','speed':0.06}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.06,'cmult':0.5}
+darkpikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman3.png','speed':0.06,'cmult':0.5}
+zombie {'side':0,'aitype':0,'damage':5,'health':50,'range':1.6,'image':'Zombie.png','speed':0.06,'cmult':0.5}
+##events##
+setup 16.666 11.666 23.333 18.333
+unit soldier 17.466 12.466
+unit soldier 17.466 13.466
+unit soldier 17.466 14.466
+unit soldier 17.466 15.466
+unit soldier 17.466 16.466
+unit soldier 17.466 17.466
+unit pikeman 18.466 12.466 c$0.5
+unit pikeman 18.466 13.466 c$0.5
+unit pikeman 18.466 14.466 c$0.5
+unit pikeman 18.466 15.466 c$0.5
+unit pikeman 18.466 16.466 c$0.5
+unit pikeman 18.466 17.466 c$0.5
+unit pikeman 19.466 12.466 c$0.5
+unit pikeman 19.466 13.466 c$0.5
+unit pikeman 19.466 16.466 c$0.5
+unit pikeman 19.466 17.466 c$0.5
+unit darkknight 17.466 1.333
+unit zombie 18.466 1.333
+unit darkpikeman 19.466 1.333 c$0.5
+unit darkknight 20.466 1.333
+unit zombie 21.466 1.333
+unit zombie 18.466 2.666
+unit zombie 21.466 2.666
+unit darkknight 22.466 2.666
+ummon 125t unit darkknight 7.466 28.666
+whenever 125t do unit zombie 18.466 28.666
+whenever 125t do unit darkpikeman 19.466 28.666 c$0.5
+whenever 125t do unit darkknight 20.466 28.666
+whenever 125t do unit zombie 21.466 28.666
+whenever 125t do unit zombie 18.466 27.333
+whenever 125t do unit zombie 21.466 27.333
+whenever 125t do unit darkknight 22.466 27.333
+whenever 375t do unit darkknight 1.333 12.533
+whenever 375t do unit zombie 1.333 13.533
+whenever 375t do unit darkpikeman 1.333 14.533 c$0.5
+whenever 375t do unit darkknight 1.333 15.533
+whenever 375t do unit zombie 1.333 16.533
+whenever 375t do unit zombie 2.666 13.533
+whenever 375t do unit zombie 2.666 16.533
+whenever 375t do unit darkknight 2.666 17.533
+whenever 625t do unit darkknight 38.666 12.533
+whenever 625t do unit zombie 38.666 13.533
+whenever 625t do unit darkpikeman 38.666 14.533 c$0.5
+whenever 625t do unit darkknight 38.666 15.533
+whenever 625t do unit zombie 38.666 16.533
+whenever 625t do unit zombie 37.333 13.533
+whenever 625t do unit zombie 37.333 16.533
+whenever 625t do unit darkknight 37.333 17.533
+##terrain##
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

@@ -1,0 +1,145 @@
+<h3>Slasha level development guide</h3>
+
+<b>Note: I haven't gotten the level editing part working yet</b>
+
+<p>In Slasha, gameplay is subdivided into <strong>campaigns</strong>, which are in turn made of up <strong>levels</strong>. The campaigns are what you see on the start screen of the game, and the levels are the stages that you need to go through to beat a campaign. To start creating levels, you will first need to create a campaign. Click on "Create new" and enter a campaign name (don't worry, if you don't like the name you can always enter the campaign and delete the only level created, deleting the campaign). You will be redirected to the editing mode for the first level:</p>
+
+<p><img src="images/screenie1.png" alt="screenie1.png" title="" /></p>
+
+<p>You see two windows there: the level editing window and the text editing window. The text in the text editing window is how the level is stored internally in the game. You can always edit the text (or paste in edited text - your editor is likely far more comfortable than the textbok) yourself rather than relying on the level editor - in fact, this is required for levels that use summons, triggers, variables and other advanced functionality and to edit the story. But we can start off with the level editor. You can select a color at the top to paint the terrain - either grey (inaccessible), a varying shade of green (accessible), or the yellow-green, signifying a setup rectangle (setup is not a color; setup terrain can be any color underneath, accessible or not). The minus sign on the top right is a button to remove a setup rectange. You can also press I and input an exact value (0 = rock, 1-99 = accessible terrain) to color the terrain. Now, click on any square to change its color or right click to select many squares at once. If you don't like something you did, you can always press Y to undo.</p>
+
+<p><img src="images/screenie2.png" alt="screenie2.png" title="" /></p>
+
+<p>Now, on to the class menu.</p>
+
+<p><img src="images/screenie3.png" alt="screenie3.png" title="" /></p>
+
+<p>The game starts you off with two classes, and this menu allows you to change their attributes, add new classes and delete classes. To select a class to work on use the left/right arrow keys or click on it on the top menu (clicking on or arrow keying your way to + will create a new class). The class attributes are:</p>
+
+<ul>
+<li><code>side</code> - what side the unit is on; 1 is the player, and 0,2,3,4,etc are different warring enemy factions. For most games, you will need just 0 and 1.</li>
+<li><code>aitype</code> - how the unit is controlled. 1 is player controlled, 0 is computer controlled. You can have gimmick maps with player controlled enemies and you can have some computer controlled allies.</li>
+<li><code>damage</code> - self-explanatory</li>
+<li><code>health</code> - self-explanatory</li>
+<li><code>range</code> - 1 means you can reach units 1 (terrain) square away, 1.42 means you can reach units 1 square away diagonally, 2 means you can reach units 2 squares away, 2.24 means you can reach units a knight's move away, and so on, right up until 50, which lets you reach one corner from the other.</li>
+<li><code>image</code> - you can use images from the game or put in a URL (only through text editing though). The game images are:
+<ul>
+<li><img src="images/Soldier.png" alt="" title="" /> <img src="images/Soldier2.png" alt="" title="" /> <img src="images/Soldier3.png" alt="" title="" /> Soldier.png, Soldier2.png, Soldier3.png</li>
+<li><img src="images/Pikeman.png" alt="" title="" /> <img src="images/Pikeman2.png" alt="" title="" /> <img src="images/Pikeman3.png" alt="" title="" /> Pikeman.png, Pikeman2.png, Pikeman3.png</li>
+<li><img src="images/Archer.png" alt="" title="" /> <img src="images/Archer2.png" alt="" title="" /> <img src="images/Archer3.png" alt="" title="" /> Archer.png, Archer2.png, Archer3.png</li>
+<li><img src="images/Commander.png" alt="" title="" /> <img src="images/Commander2.png" alt="" title="" /> <img src="images/Commander3.png" alt="" title="" /> Commander.png, Commander2.png, Commander3.png</li>
+<li><img src="images/Mage.png" alt="" title="" /> <img src="images/Mage2.png" alt="" title="" /> <img src="images/Mage3.png" alt="" title="" /> Mage.png, Mage2.png, Mage3.png</li>
+<li><img src="images/Guardian.png" alt="" title="" /> <img src="images/Guardian2.png" alt="" title="" /> <img src="images/Guardian3.png" alt="" title="" /> Guardian.png, Guardian2.png, Guardian3.png</li>
+<li><img src="images/Horseman.png" alt="" title="" /> <img src="images/Horseman2.png" alt="" title="" /> <img src="images/Horseman3.png" alt="" title="" /> Horseman.png, Horseman2.png, Horseman3.png</li>
+<li><img src="images/Special1.png" alt="" title="" /> <img src="images/Special2.png" alt="" title="" /> Special1.png, Special2.png</li>
+<li><img src="images/Boss1.png" alt="" title="" /> <img src="images/Boss2.png" alt="" title="" /> <img src="images/Boss3.png" alt="" title="" /> Boss1.png, Boss2.png, Boss3.png</li>
+<li><img src="images/Catapult.png" alt="" title="" /> Catapult.png</li>
+<li><img src="images/Civilian.png" alt="" title="" /> Civilian.png</li>
+<li><img src="images/Door.png" alt="" title="" /> Door.png</li>
+<li><img src="images/Eye.png" alt="" title="" /> Eye.png</li>
+<li><img src="images/Golem.png" alt="" title="" /> Golem.png</li>
+<li><img src="images/Medkit.png" alt="" title="" /> Medkit.png</li>
+<li><img src="images/Zombie.png" alt="" title="" /> Zombie.png</li>
+</ul></li>
+<li><code>speed</code> - terrain squares per unit of game time</li>
+<li><code>desc</code> - description, useful only for advanced level editing</li>
+<li><code>cmult</code> - units who are currently attacking (ie. hitting enemies, not advancing) see their speed reduced, multiplied by this value</li>
+<li><code>bmult</code> - units moving backwards see their speed reduced, multiplied by this value</li>
+<li><code>inacc</code> - ranged units with this parameter can't quite target the range of their arrows, so they will hit all enemies within this number of squares from the target along the line from the shooter to the target.</li>
+</ul>
+
+<p>Click on or navigate to and press enter on an attribute to change it. Then, input the desired new name and press enter. Notice how the text on the right changes automatically to reflect the change you've made.</p>
+
+<p>The last window is the units editing:</p>
+
+<p><img src="images/screenie4.png" alt="screenie4.png" title="" /></p>
+
+<p>Here, click somewhere to place a unit, and click on a unit or on a class on the top to select a class to place units of. To move or remove units already placed, select them. That's it! When you're done editing, press Done (or hit D).</p>
+
+<p>You'll now have an opportunity to play your level. If you're not satisfied with it, you can open the pause menu and select 'Edit this level', or even 'Delete this level'. To add another level to the campaign, select 'Add new level'. If you want to download your entire campaign, select 'Copy all campaign data' and do so. You will get a full campaign file which you will be able to upload through 'Paste campaign file'. The tutorial campaign has been provided for your convenience <a href="/example">here</a></p>
+
+<p>Don't be afraid to edit it! The level editor is completely transparent, it does no strange voodoo beyond creating the text you see there!</p>
+
+<p>Now, onto more advanced editing. This is all about events - there are no advanced class, story or terrain features beyond what the editor provides. The simplest advanced feature is the when/whenever syntax. This summons a 'soldier' unit in the middle of the field at the start of the game:</p>
+
+<pre><code>unit soldier 20 15
+</code></pre>
+
+<p>'unit' is the <em>command</em>, and 'soldier 20 15' are its <em>arguments</em>. This command adds a soldier there after 500 ticks of game time, <em>and every 150 ticks thereafter</em>:</p>
+
+<pre><code>whenever 500t150 do unit soldier 20 15
+</code></pre>
+
+<p>Whenever has two sets of arguments: trigger arguments (XXXtYYY being the most common) and the command argument (which can, of course, itself take arguments). Whenever can work with any command, not just 'unit', This adds soldiers there in a quadratic expansion by <em>periodically summoning periodic summons</em>:</p>
+
+<pre><code>whenever 1000t500 do whenever 167t167 do unit soldier 20 15
+</code></pre>
+
+<p>Note that all 't' arguments use game time; the 167t167 does not operate on its own internal clock, so this command will first summon a unit at 1002 (167*6) ticks, not 1167.</p>
+
+<p>Trigger arguments are far more complex than this, though. 't' is the only global trigger, all others work on a per-unit basis. If at least one unit passes all triggers, then the command is triggered. </p>
+
+<pre><code>whenever 50t50 10x13 10y13 $friendly do unit zombie 11.5 11.5
+</code></pre>
+
+<p>Every 50 ticks, if a unit with the description 'friendly' is standing within the area [10,10,13,13] (side note: in the level editing window, you can see the coordinates of the spot you're pointing your mouse to on the lower right), summon a zombie in the middle of the area. If one of the triggers is 'none', then whenever's functionality is flipped: if exactly zero units fit all the triggers then the command is triggered. Here's a good use for 'none'; I'll leave it up to you to figure out what it does:</p>
+
+<pre><code>when none $enemygeneral do win
+when none $friendlygeneral do lose
+</code></pre>
+
+<p>When is just like whenever, except it can only trigger once. It's useful for one-time 'trapdoor' events:</p>
+
+<pre><code>when $friendly 10y12 20y22 do unit zombie 19 14
+when $friendly 10y12 20y22 do unit zombie 20 14
+when $friendly 10y12 20y22 do unit zombie 19 15
+when $friendly 10y12 20y22 do unit zombie 20 15
+</code></pre>
+
+<p>The entire list of triggers is (AAA and BBB stand in for numbers or strings):</p>
+
+<ul>
+<li><code>AAAtBBB</code> - no units pass, except at AAA ticks and every BBB ticks thereafter, in which case all units pass</li>
+<li><code>sAAA</code> - a unit passes if its side is AAA</li>
+<li><code>AAAxBBB</code> - a unit passes if its X coordinate is between AAA and BBB</li>
+<li><code>AAAyBBB</code> - a unit passes if its Y coordinate is between AAA and BBB</li>
+<li><code>AAAhBBB</code> - a unit passes if its health is between AAA and BBB</li>
+<li><code>AAAlBBB</code> - a unit passes if it is within line of sight of (AAA,BBB)</li>
+<li><code>AAA=BBB</code> - all units pass only if AAA is equal to BBB (only useful with variables, wait until later for that)</li>
+<li><code>AAA&lt;BBB</code> - all units pass only if AAA is less than BBB (only useful with variables, wait until later for that)</li>
+<li><code>AAA&gt;BBB</code> - all units pass only if AAA is greater than BBB (only useful with variables, wait until later for that)</li>
+</ul>
+
+<p>Now, we'll cover the entire list of commands:</p>
+
+<ul>
+<li><code>unit CLASS X Y</code> - summons a unit</li>
+<li><code>xunit CLASS X Y</code> - summons a unit at the exact location, making no compromises to try and fit it into a nearby unoccupied square (useful for strategically placed catapults)</li>
+<li><code>win</code> - self-explanatory</li>
+<li><code>lose</code> - self-explanatory</li>
+<li><code>set TRIGGERS attribute ATT VAL</code> - sets the attribute ATT (x,y,health,etc) of all units that pass TRIGGERS to VAL</li>
+<li><code>change TRIGGERS attribute ATT VAL</code> - adds VAL to the attribute ATT (x,y,health,etc) of all units that pass TRIGGERS</li>
+<li><code>setup LEFT TOP RIGHT BOTTOM</code> - setup rectangle (not useful with when/whenever, obviously)</li>
+<li><code>setr VAR VAL</code> - sets the variable VAR to VAL</li>
+<li><code>changer VAR VAL</code> - adds VAL to the variable VAR</li>
+</ul>
+
+<p>To use variables, put underscores around the variable's name and the substitution is done automatically. For example, consider some actual text from a level in the <code>foundation</code> campaign:</p>
+
+<pre><code>when none $enemy 16.666x40 do setr s 1
+when _s_=1 do set 0x16.666 $friendly attribute health 0
+when _s_=1 do win
+</code></pre>
+
+<p>When there are no enemies (remember, $enemy does not automatically map to 'enemies', you have to declare the descriptions for this to work) with X coordinates above 16.666, set <code>s</code> to 1. When s is 1, set the health of all friendly units in that zone to 0 (for scorekeeping purposes, obviously this doesn't change anything) and win. You can place variables anywhere, even like this:</p>
+
+<pre><code>whenever 10x13 10y13 do changer count 1
+when 1000t do unit boss 20 15
+when 1000t set $boss attribute health _count_00
+</code></pre>
+
+<p>When a unit is within the square, add 1 to the count, and at 1000 ticks add a boss with 100x the count as his health.</p>
+
+<p>That's all you need to know. Happy editing!</p>
+
+<a href="/">Back</a>

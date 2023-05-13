@@ -1,0 +1,123 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/foundation/4.html"; next_location = "../../levels/foundation/5.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+The locals retreat and your people must now cross the mountains. However, the locals are not willing to give up. Your men eventually get caught in an ambush from the mountains. You make it into a defensive position but there's no way out, and enemies are rushing in through the tunnels from all sides. Collapsing the tunnels seems to be your only hope.
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1}
+zerker {'side':0,'aitype':0,'damage':10,'health':50,'range':1.6,'image':'Soldier2.png','speed':0.1}
+zombie {'side':0,'aitype':0,'damage':7,'health':70,'range':1.6,'image':'Zombie.png','speed':0.1}
+darkknight {'side':0,'aitype':0,'damage':40,'health':60,'range':1.6,'image':'Soldier3.png','speed':0.1}
+archer {'side':1,'aitype':1,'damage':8,'health':50,'range':50,'image':'Archer.png','speed':0.067,'inacc':2}
+enemyarcher {'side':0,'aitype':0,'damage':8,'health':50,'range':50,'image':'Archer2.png','speed':0.067,'inacc':2}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.1,'cmult':0.5}
+nedoor {'side':0,'aitype':0,'damage':0,'health':100,'range':1,'image':'Door.png','speed':0,'desc':'ne'}
+nwdoor {'side':0,'aitype':0,'damage':0,'health':100,'range':1,'image':'Door.png','speed':0,'desc':'nw'}
+swdoor {'side':0,'aitype':0,'damage':0,'health':100,'range':1,'image':'Door.png','speed':0,'desc':'sw'}
+##events##
+setup 30 20 40 30
+unit nedoor 35 1
+unit nwdoor 1 1
+unit swdoor 1 29
+unit soldier 33.333 24.666
+unit soldier 34.666 24.666
+unit soldier 36 24.666
+unit soldier 37.333 24.666
+unit soldier 38.666 24.666
+unit archer 33.333 26 b$0.95
+unit archer 34.666 26 b$0.95
+unit archer 36 26 b$0.95
+unit archer 37.333 26 b$0.95
+unit archer 38.666 26 b$0.95
+whenever 300t360 do unit soldier 34.333 27
+whenever 300t360 do unit soldier 35.666 27
+whenever 300t360 do unit soldier 37 27
+whenever 300t360 do unit pikeman 35 25.666 c$0.5
+whenever 300t360 do unit pikeman 36.333 25.666 c$0.5
+whenever 300t360 do unit archer 34.333 24.333 b$0.95
+whenever 300t360 do unit archer 35.666 24.333 b$0.95
+whenever 300t360 do unit archer 37 24.333 b$0.95
+unit zerker 34.666 2 
+unit zerker 36 2 
+unit zerker 37.333 2 
+unit zerker 38.666 2 
+unit zerker 34.666 3.333 
+unit zerker 36 3.333 
+unit zerker 37.333 3.333 
+unit zerker 38.666 3.333 
+whenever 90t50 $ne do unit zombie 36.666 2 
+whenever 440t1200 $ne do unit darkknight 37.333 1.333 
+whenever 440t1100 $ne do unit darkknight 37.333 2.666 
+whenever 440t1100 $ne do unit darkknight 38.666 1.333 
+whenever 440t1100 $ne do unit darkknight 38.666 2.666 
+unit enemysoldier 1.333 26.666
+unit enemysoldier 2.666 26.666
+unit enemysoldier 1.333 28
+unit enemysoldier 2.666 28
+whenever 480t660 $sw do unit enemysoldier 1.333 28
+whenever 480t660 $sw do unit enemysoldier 2.666 28
+whenever 480t660 $sw do unit enemysoldier 4 28
+whenever 480t660 $sw do unit enemysoldier 5.333 28
+whenever 480t660 $sw do unit enemypikeman 1.333 29.333 c$0.5
+whenever 480t660 $sw do unit enemypikeman 2.666 29.333 c$0.5
+whenever 480t660 $sw do unit enemypikeman 4 29.333 c$0.5
+whenever 480t660 $sw do unit enemypikeman 5.333 29.333 c$0.5
+whenever 2000t2000 $sw do unit darkknight 0.533 23.333
+whenever 2000t2000 $sw do unit darkknight 1.466 23.333
+whenever 2000t2000 $sw do unit darkknight 0.533 24.333
+whenever 2000t2000 $sw do unit darkknight 1.466 24.333
+whenever 2000t2000 $sw do unit darkknight 0.533 25.333
+whenever 2000t2000 $sw do unit darkknight 1.466 25.333
+whenever 2000t2000 $sw do unit darkknight 0.533 26.333
+whenever 2000t2000 $sw do unit darkknight 1.466 26.333
+unit enemysoldier 1.333 1.333
+unit enemysoldier 2.666 1.333
+unit enemysoldier 1.333 2.666
+unit enemysoldier 2.666 2.666
+whenever 200t220 $nw do unit enemysoldier 1.333 1.333
+whenever 200t220 $nw do unit enemypikeman 2.666 1.333 c$0.5
+whenever 200t110 $nw do unit enemyarcher 2 2.666 b$0.95
+whenever 3000t2000 $nw do unit darkknight 0.533 3
+whenever 3000t2000 $nw do unit darkknight 1.466 3
+whenever 3000t2000 $nw do unit darkknight 0.533 4
+whenever 3000t2000 $nw do unit darkknight 1.466 4
+whenever 3000t2000 $nw do unit darkknight 0.533 5
+whenever 3000t2000 $nw do unit darkknight 1.466 5
+whenever 3000t2000 $nw do unit darkknight 0.533 6
+whenever 3000t2000 $nw do unit darkknight 1.466 6
+##terrain##
+[[40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40], [40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40], [40, 40, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40], [40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40], [40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40], [40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0], [40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 40, 40, 0, 40, 40, 0, 40, 40, 0, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 40, 40, 0, 40, 40, 0, 40, 40, 0, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 40, 40, 0, 40, 40, 0, 40, 40, 0, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 40, 40, 0, 40, 40, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 40, 40, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40], [40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40], [0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 0, 40, 40, 40, 40, 0, 0, 0], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

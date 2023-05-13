@@ -1,0 +1,127 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/rebellion/7.html"; next_location = "../../levels/rebellion/8.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+Your army crosses the border into Hymera. Less than 1 kilometer into the territory, you are surrounded by Hymera soldiers. They aim their bows at you but someone commands them not to shoot. One man comes out and walks up to you. He tells you that one of his sentries saw you fighting Madrina's troops. He asks what you are doing and why you are fighting your own people. You relate your story and after two hours of discussion, they lead you into one of their border forts. In five days, Madrina's main offensive is launched...
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1}
+enemyarcher {'side':0,'aitype':0,'damage':5,'health':50,'range':50,'image':'Archer2.png','speed':0.08,'bmult':0.95}
+archer {'side':1,'aitype':1,'damage':8,'health':50,'range':50,'image':'Archer.png','speed':0.067,'inacc':2}
+warlock {'side':0,'aitype':0,'damage':8,'health':50,'range':50,'image':'Mage3.png','speed':0.067,'inacc':2}
+zombie {'side':0,'aitype':0,'damage':6,'health':60,'range':1.6,'image':'Zombie.png','speed':0.1}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':3.2,'image':'Pikeman.png','speed':0.1,'cmult':0.5}
+catapult {'side':1,'aitype':1,'damage':35,'health':40,'range':50,'image':'Catapult.png','speed':0,'inacc':3}
+##events##
+setup 25 0 40 15
+unit enemysoldier 22 29
+unit enemysoldier 23 29
+unit enemysoldier 24 29
+unit enemysoldier 25 29
+unit enemysoldier 26 29
+unit enemysoldier 27 29
+unit enemysoldier 28 29
+unit enemysoldier 29 29
+unit enemysoldier 30 29
+unit enemysoldier 31 29
+unit enemysoldier 32 29
+unit enemysoldier 33 29
+unit enemysoldier 34 29
+unit enemysoldier 35 29
+unit enemysoldier 36 29
+unit enemysoldier 37 29
+unit enemysoldier 38 29
+unit enemysoldier 39 29
+whenever 150t do unit zombie 1 1
+whenever 180t do unit zombie 1 2
+whenever 200t do unit zombie 1 3
+whenever 220t do unit zombie 1 4
+whenever 240t do unit zombie 1 5
+whenever 240t do unit zombie 1 6
+whenever 240t do unit zombie 1 7
+whenever 240t do unit zombie 1 8
+whenever 240t do unit zombie 1 9
+whenever 240t do unit zombie 1 10
+whenever 240t do unit zombie 1 11
+whenever 240t do unit zombie 1 12
+whenever 240t do unit zombie 1 13
+whenever 240t do unit zombie 1 14
+whenever 240t do unit zombie 1 15
+whenever 240t do unit zombie 2 1
+whenever 240t do unit zombie 2 2
+whenever 240t do unit zombie 2 3
+whenever 240t do unit zombie 2 4
+whenever 240t do unit zombie 2 5
+whenever 240t do unit zombie 2 6
+whenever 240t do unit zombie 2 7
+whenever 240t do unit zombie 2 8
+whenever 240t do unit zombie 2 9
+whenever 240t do unit zombie 2 10
+whenever 240t do unit zombie 2 11
+whenever 240t do unit zombie 2 12
+whenever 240t do unit zombie 2 13
+whenever 240t do unit zombie 2 14
+whenever 480t do unit zombie 2 15
+whenever 640t do unit enemyarcher 27 29 b$0.95
+whenever 640t do unit warlock 28 29 b$0.95
+whenever 640t do unit enemyarcher 29 29 b$0.95
+whenever 640t do unit warlock 30 29 b$0.95
+whenever 640t do unit enemyarcher 31 29 b$0.95
+whenever 640t do unit warlock 32 29 b$0.95
+whenever 640t do unit enemyarcher 33 29 b$0.95
+whenever 640t do unit warlock 34 29 b$0.95
+whenever 640t do unit enemyarcher 35 29 b$0.95
+whenever 640t do unit warlock 36 29 b$0.95
+whenever 640t do unit enemyarcher 37 29 b$0.95
+unit soldier 34 1.666
+unit soldier 35 1.666
+unit soldier 36 1.666
+unit soldier 37 1.666
+unit soldier 38 1.666
+unit soldier 39 1.666
+unit pikeman 34 2.933 c$0.5
+unit pikeman 35 2.933 c$0.5
+unit pikeman 36 2.933 c$0.5
+unit pikeman 37 2.933 c$0.5
+unit pikeman 38 2.933 c$0.5
+unit pikeman 39 2.933 c$0.5
+unit archer 34 4 b$0.95
+unit archer 36 4 b$0.95
+unit archer 37 4 b$0.95
+unit archer 39 4 b$0.95
+unit catapult 35 5.333
+unit catapult 38 5.333
+##terrain##
+[[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [0, 0, 0, 0, 30, 30, 30, 30, 30, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [0, 0, 0, 0, 40, 40, 40, 40, 40, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [46, 46, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 54, 54, 54, 46, 46, 40, 40, 40, 40, 40, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 54, 54, 54, 54, 0, 0, 40, 40, 40, 40, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 54, 54, 54, 54, 0, 0, 40, 40, 40, 40, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 54, 54, 54, 54, 0, 0, 40, 40, 40, 40, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 54, 54, 54, 54, 0, 0, 40, 40, 40, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 54, 54, 54, 54, 0, 0, 40, 40, 40, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 54, 54, 54, 54, 54, 46, 40, 40, 40, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [54, 54, 54, 54, 54, 54, 54, 46, 46, 40, 40, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

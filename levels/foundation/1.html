@@ -1,0 +1,90 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/foundation/1.html"; next_location = "../../levels/foundation/2.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+You have successfully made it out of the walled city, but you must still leave the island. The only way to do that is by ship. The trading ships are faster than the war ships, once you get away you will be safe. One ship survives that will safely get you out of Lindra. For you to be able to leave, the ship must be completely controlled by your forces.
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1,'desc':'friendly'}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1,'desc':'enemy'}
+warlock {'side':0,'aitype':0,'damage':4,'health':30,'range':50,'image':'Mage3.png','speed':0.033,'bmult':0.95,'desc':'enemy'}
+enemyarcher {'side':0,'aitype':0,'damage':6,'health':50,'range':50,'image':'Archer2.png','speed':0.044,'bmult':0.95,'desc':'enemy'}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5,'desc':'friendly'}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.1,'cmult':0.5,'desc':'enemy'}
+##events##
+when none $enemy 16.666x40 do setr s 1
+when _s_=1 do set 0x16.666 $friendly attribute health 0
+when _s_=1 do win
+unit soldier 2.666 9
+unit soldier 2.666 10.333
+unit soldier 2.666 11.666
+unit soldier 2.666 13
+unit soldier 2.666 14.333
+unit soldier 2.666 15.666
+unit soldier 2.666 17
+unit soldier 2.666 18.333
+unit soldier 2.666 19.666
+unit soldier 2.666 21
+unit pikeman 1.333 9 c$0.5
+unit pikeman 1.333 10.333 c$0.5
+unit pikeman 1.333 11.666 c$0.5
+unit pikeman 1.333 13 c$0.5
+unit pikeman 1.333 14.333 c$0.5
+unit pikeman 1.333 15.666 c$0.5
+unit pikeman 1.333 17 c$0.5
+unit pikeman 1.333 18.333 c$0.5
+unit pikeman 1.333 19.666 c$0.5
+unit pikeman 1.333 21 c$0.5
+unit warlock 30 1.333
+unit warlock 31.666 1.333
+unit warlock 33.333 1.333
+unit warlock 36.666 14
+unit warlock 38.333 15
+unit warlock 36.666 16
+unit warlock 28 24
+unit warlock 33.333 28
+unit warlock 38 28
+unit warlock 20 15
+whenever 200t200 do unit enemysoldier 2.666 8
+whenever 200t200 do unit enemysoldier 2.666 9.333
+whenever 200t200 do unit enemysoldier 2.666 20.666
+whenever 200t200 do unit enemysoldier 2.666 22
+whenever 200t200 do unit enemypikeman 1.333 8
+whenever 200t200 do unit enemypikeman 1.333 9.333
+whenever 200t200 do unit enemypikeman 1.333 20.666
+whenever 200t200 do unit enemypikeman 1.333 22
+whenever 450t100 do unit enemysoldier 2 14.333
+whenever 450t100 do unit enemysoldier 2 15.666
+##terrain##
+[[40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40], [40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 40, 40, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0], [0, 40, 40, 40, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 0, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0], [0, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 0], [0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

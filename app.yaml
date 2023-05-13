@@ -1,0 +1,14 @@
+application: vubslasha
+version: 31
+runtime: python
+api_version: 1
+
+handlers:
+- url: /images
+  static_dir: images
+
+- url: /javascript
+  static_dir: javascript
+
+- url: /.*
+  script: slasha.py

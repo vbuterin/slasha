@@ -1,0 +1,183 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/foundation/7.html"; next_location = "../../levels/foundation/8.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+The journey continues, and you arrive at a mine. You observe the mine for a few hours and notice that slaves are being used. Discipline is difficult -  a whip is heard every other minute, and the slaves do not look happy to be there. What a perfect opportunity to rescue some innocent people and bolster your army with people eager to kill your enemy.
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1,'desc':'friendly'}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5,'desc':'friendly'}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.1,'cmult':0.5}
+catapult {'side':0,'aitype':0,'damage':30,'health':50,'range':50,'image':'Catapult.png','speed':0,'inacc':3}
+civilian {'side':1,'aitype':1,'damage':7,'health':72,'range':1.6,'image':'Civilian.png','speed':0.1,'desc':'friendly'}
+##events##
+setup 30 25 40 30
+unit soldier 30.466 25.466
+unit soldier 30.466 26.466
+unit soldier 30.466 27.466
+unit soldier 30.466 28.466
+unit soldier 30.466 29.466
+unit soldier 31.466 25.466
+unit soldier 31.466 26.466
+unit soldier 31.466 27.466
+unit soldier 31.466 28.466
+unit soldier 31.466 29.466
+unit pikeman 32.466 25.466
+unit pikeman 32.466 26.466
+unit pikeman 32.466 27.466
+unit pikeman 32.466 28.466
+unit pikeman 32.466 29.466
+unit pikeman 33.466 25.466
+unit pikeman 33.466 26.466
+unit pikeman 33.466 27.466
+unit pikeman 33.466 28.466
+unit pikeman 33.466 29.466
+unit catapult 25.466 13
+unit catapult 25.466 15
+unit catapult 12.466 13
+unit catapult 12.466 15
+unit catapult 17.466 9.466
+unit catapult 20.466 18.466
+unit catapult 17.466 18.466
+unit catapult 20.466 9.466
+unit enemysoldier 36.466 5.466
+unit enemysoldier 37.466 5.466
+unit enemysoldier 38.466 5.466
+unit enemysoldier 39.466 5.466
+unit enemypikeman 36.466 4.466 c$0.5
+unit enemypikeman 37.466 4.466 c$0.5
+unit enemypikeman 38.466 4.466 c$0.5
+unit enemypikeman 39.466 4.466 c$0.5
+unit enemysoldier 12 25.466
+unit enemysoldier 12 26.466
+unit enemysoldier 12 27.466
+unit enemysoldier 12 28.466
+unit enemysoldier 12 29.466
+unit enemypikeman 11 25.466 c$0.5
+unit enemypikeman 11 26.466 c$0.5
+unit enemypikeman 11 27.466 c$0.5
+unit enemypikeman 11 28.466 c$0.5
+unit enemypikeman 11 29.466 c$0.5
+unit enemysoldier 4.466 0.466
+unit enemysoldier 4.466 1.466
+unit enemysoldier 4.466 2.466
+unit enemysoldier 4.466 3.466
+unit enemysoldier 4.466 4.466
+unit enemysoldier 3.466 0.466
+unit enemysoldier 3.466 1.466
+unit enemysoldier 3.466 2.466
+unit enemysoldier 3.466 3.466
+unit enemysoldier 3.466 4.466
+unit enemypikeman 2.466 0.466 c$0.5
+unit enemypikeman 2.466 1.466 c$0.5
+unit enemypikeman 2.466 2.466 c$0.5
+unit enemypikeman 2.466 1.466 c$0.5
+unit enemypikeman 2.466 4.466 c$0.5
+unit enemypikeman 1.466 0.466 c$0.5
+unit enemypikeman 1.466 1.466 c$0.5
+unit enemypikeman 1.466 2.466 c$0.5
+unit enemypikeman 1.466 3.466 c$0.5
+unit enemypikeman 1.466 2.466 c$0.5
+when $friendly 30x35 5y15 do setr neslaves 1
+when _neslaves_>0 do unit civilian 31 6
+when _neslaves_>0 do unit civilian 32.466 6
+when _neslaves_>0 do unit civilian 34 6
+when _neslaves_>0 do unit civilian 31 8
+when _neslaves_>0 do unit civilian 32.466 8
+when _neslaves_>0 do unit civilian 34 8
+when _neslaves_>0 do unit civilian 31 10
+when _neslaves_>0 do unit civilian 32.466 10
+when _neslaves_>0 do unit civilian 34 10
+when _neslaves_>0 do unit civilian 31 12
+when _neslaves_>0 do unit civilian 32.466 12
+when _neslaves_>0 do unit civilian 34 12
+when _neslaves_>0 do unit civilian 31 14
+when _neslaves_>0 do unit civilian 32.466 14
+when _neslaves_>0 do unit civilian 34 14
+when $friendly 15x25 23y28 do setr seslaves 1
+when _seslaves_>0 do unit civilian 16 24
+when _seslaves_>0 do unit civilian 16 25.466
+when _seslaves_>0 do unit civilian 16 27
+when _seslaves_>0 do unit civilian 18 24
+when _seslaves_>0 do unit civilian 18 25.466
+when _seslaves_>0 do unit civilian 18 27
+when _seslaves_>0 do unit civilian 20 24
+when _seslaves_>0 do unit civilian 20 25.466
+when _seslaves_>0 do unit civilian 20 27
+when _seslaves_>0 do unit civilian 22 24
+when _seslaves_>0 do unit civilian 22 25.466
+when _seslaves_>0 do unit civilian 22 27
+when _seslaves_>0 do unit civilian 24 24
+when _seslaves_>0 do unit civilian 24 25.466
+when _seslaves_>0 do unit civilian 24 27
+when $friendly 0x7 23y30 do setr swslaves 1
+when _swslaves_>0 do unit civilian 1.466 24.466
+when _swslaves_>0 do unit civilian 2.8 24.466
+when _swslaves_>0 do unit civilian 4.133 24.466
+when _swslaves_>0 do unit civilian 5.466 24.466
+when _swslaves_>0 do unit civilian 1.466 25.8
+when _swslaves_>0 do unit civilian 2.8 25.8
+when _swslaves_>0 do unit civilian 4.133 25.8
+when _swslaves_>0 do unit civilian 5.466 25.8
+when _swslaves_>0 do unit civilian 1.466 27.133
+when _swslaves_>0 do unit civilian 2.8 27.133
+when _swslaves_>0 do unit civilian 4.133 27.133
+when _swslaves_>0 do unit civilian 5.466 27.133
+when _swslaves_>0 do unit civilian 1.466 28.466
+when _swslaves_>0 do unit civilian 2.8 28.466
+when _swslaves_>0 do unit civilian 4.133 28.466
+when _swslaves_>0 do unit civilian 5.466 28.466
+when $friendly 10x15 0y5 do setr nslaves 1
+when _nslaves_>0 do unit civilian 11.466 1.466
+when _nslaves_>0 do unit civilian 12.466 1.466
+when _nslaves_>0 do unit civilian 13.466 1.466
+when _nslaves_>0 do unit civilian 11.466 2.466
+when _nslaves_>0 do unit civilian 12.466 2.466
+when _nslaves_>0 do unit civilian 13.466 2.466
+when _nslaves_>0 do unit civilian 11.466 3.466
+when _nslaves_>0 do unit civilian 12.466 3.466
+when _nslaves_>0 do unit civilian 13.466 3.466
+when $friendly 0x5 10y15 do setr wslaves 1
+when _wslaves_>0 do unit civilian 1.466 11.466
+when _wslaves_>0 do unit civilian 2.466 11.466
+when _wslaves_>0 do unit civilian 3.466 11.466
+when _wslaves_>0 do unit civilian 1.466 12.466
+when _wslaves_>0 do unit civilian 2.466 12.466
+when _wslaves_>0 do unit civilian 3.466 12.466
+when _wslaves_>0 do unit civilian 1.466 13.466
+when _wslaves_>0 do unit civilian 2.466 13.466
+when _wslaves_>0 do unit civilian 3.466 13.466
+##terrain##
+[[40, 40, 40, 40, 40, 61, 61, 61, 61, 0, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 40, 40, 0, 40, 40, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 61, 61, 61, 61, 0, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 40, 40, 0, 40, 40, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 61, 61, 61, 61, 0, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 40, 40, 0, 40, 40, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 61, 61, 61, 61, 0, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 40, 40, 0, 40, 40, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 61, 61, 61, 61, 0, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 40, 40, 0, 40, 40, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 0, 61, 61, 0, 0, 61, 61, 61, 61, 61, 61, 0, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 0, 0, 0, 0], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [0, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 40, 40, 40, 40, 40, 61, 61, 61, 61, 61, 40, 40, 40, 40, 40, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 40, 40, 40, 40, 40, 61, 61, 61, 61, 61, 40, 40, 40, 40, 40, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 61, 61, 61, 61, 0, 0, 0, 40, 40, 40, 61, 0, 0, 0, 61, 40, 40, 40, 40, 40, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 61, 61, 61, 61, 0, 40, 40, 40, 40, 40, 61, 61, 61, 0, 61, 40, 40, 40, 40, 40, 61, 61, 61, 61, 61], [40, 40, 40, 40, 40, 0, 61, 61, 61, 0, 40, 0, 40, 40, 40, 61, 0, 61, 0, 61, 40, 40, 0, 0, 0, 0, 0, 0, 0, 61], [0, 0, 0, 0, 0, 0, 61, 61, 61, 0, 61, 0, 0, 0, 0, 0, 0, 61, 0, 61, 61, 61, 0, 61, 61, 61, 61, 61, 0, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 0, 61, 61, 61, 61, 61, 0, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 0, 61], [61, 61, 61, 0, 0, 0, 61, 61, 61, 61, 61, 61, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 0, 61, 61, 61, 61, 61, 0, 61], [40, 40, 40, 0, 0, 0, 61, 61, 61, 61, 40, 40, 0, 0, 0, 0, 61, 61, 61, 61, 40, 40, 0, 40, 40, 61, 61, 61, 0, 61], [40, 40, 40, 0, 0, 0, 61, 61, 61, 61, 40, 40, 0, 0, 0, 0, 61, 61, 61, 61, 40, 40, 0, 40, 40, 61, 61, 61, 0, 61], [40, 40, 40, 0, 0, 0, 61, 61, 61, 0, 40, 0, 0, 0, 0, 0, 0, 61, 0, 61, 40, 40, 0, 40, 40, 61, 61, 61, 0, 61], [40, 40, 40, 0, 0, 0, 61, 61, 61, 0, 40, 0, 40, 40, 40, 61, 0, 61, 0, 61, 40, 40, 0, 40, 40, 61, 61, 61, 0, 61], [40, 40, 40, 0, 0, 0, 61, 61, 61, 0, 40, 40, 40, 40, 40, 61, 61, 61, 0, 61, 40, 40, 0, 40, 40, 61, 61, 61, 0, 61], [61, 61, 61, 0, 0, 0, 61, 61, 61, 0, 0, 0, 61, 61, 61, 61, 0, 0, 0, 61, 61, 61, 0, 0, 0, 0, 0, 0, 0, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 0, 0, 61, 61, 0, 0, 0, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [40, 40, 40, 40, 0, 61, 61, 61, 61, 61, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61], [40, 40, 40, 40, 0, 61, 61, 61, 61, 61, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61], [40, 40, 40, 40, 0, 61, 61, 61, 61, 61, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61], [40, 40, 40, 40, 0, 61, 61, 61, 61, 61, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61], [40, 40, 40, 40, 0, 61, 61, 61, 61, 61, 40, 40, 40, 40, 40, 0, 61, 61, 61, 61, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61], [61, 61, 61, 61, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61], [61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

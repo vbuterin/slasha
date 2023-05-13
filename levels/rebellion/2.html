@@ -1,0 +1,138 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/rebellion/2.html"; next_location = "../../levels/rebellion/3.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+Your men quickly exit the city and your pursuers cannot follow you in the thick of the night. Soon, however, you encounter a foe much worse than the city guards -  men who at first glance look like the Sabayon terrorists but are, on the inside, demons from the realm of Pardus.
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.11}
+zombie {'side':0,'aitype':0,'damage':4,'health':50,'range':1.6,'image':'Zombie.png','speed':0.11}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.11,'cmult':0.5}
+catapult {'side':0,'aitype':0,'damage':60,'health':40,'range':50,'image':'Catapult.png','speed':0,'inacc':3}
+##events##
+setup 20 0 40 30
+unit zombie 1.333 0.466
+unit zombie 1.333 1.466
+unit zombie 1.333 2.466
+unit zombie 1.333 3.466
+unit zombie 1.333 4.466
+unit zombie 1.333 5.466
+unit zombie 1.333 6.466
+unit zombie 1.333 7.466
+unit zombie 1.333 8.466
+unit zombie 1.333 9.466
+unit zombie 4 10.466
+unit zombie 4 11.466
+unit zombie 4 12.466
+unit zombie 4 13.466
+unit zombie 4 14.466
+unit zombie 4 15.466
+unit zombie 4 16.466
+unit zombie 4 17.466
+unit zombie 4 18.466
+unit zombie 4 19.466
+unit zombie 1.333 20.466
+unit zombie 1.333 21.466
+unit zombie 1.333 22.466
+unit zombie 1.333 23.466
+unit zombie 1.333 24.466
+unit zombie 1.333 25.466
+unit zombie 1.333 26.466
+unit zombie 1.333 27.466
+unit zombie 1.333 28.466
+unit zombie 1.333 29.466
+unit zombie 2.666 0.466
+unit zombie 2.666 1.466
+unit zombie 2.666 2.466
+unit zombie 2.666 3.466
+unit zombie 2.666 4.466
+unit zombie 2.666 5.466
+unit zombie 2.666 6.466
+unit zombie 2.666 7.466
+unit zombie 2.666 8.466
+unit zombie 2.666 9.466
+unit zombie 2.666 10.466
+unit zombie 2.666 11.466
+unit zombie 2.666 12.466
+unit zombie 2.666 13.466
+unit zombie 2.666 14.466
+unit zombie 2.666 15.466
+unit zombie 2.666 16.466
+unit zombie 2.666 17.466
+unit zombie 2.666 18.466
+unit zombie 2.666 19.466
+unit zombie 2.666 21.466
+unit zombie 2.666 22.466
+unit zombie 2.666 23.466
+unit zombie 2.666 24.466
+unit zombie 2.666 25.466
+unit zombie 2.666 26.466
+unit zombie 2.666 27.466
+unit zombie 2.666 28.466
+unit zombie 2.666 29.466
+unit catapult 6.666 15
+unit soldier 37.666 1.5
+unit soldier 37.666 4.5
+unit soldier 37.666 7.5
+unit soldier 37.666 10.5
+unit soldier 37.666 13.5
+unit soldier 37.666 14.5
+unit soldier 37.666 15.5
+unit soldier 37.666 16.5
+unit soldier 37.666 19.5
+unit soldier 37.666 22.5
+unit soldier 37.666 25.5
+unit soldier 37.666 28.5
+unit pikeman 38.333 1
+unit pikeman 38.333 2
+unit pikeman 38.333 4
+unit pikeman 38.333 5
+unit pikeman 38.333 7
+unit pikeman 38.333 8
+unit pikeman 38.333 10
+unit pikeman 38.333 11
+unit pikeman 38.333 13
+unit pikeman 38.333 17
+unit pikeman 38.333 19
+unit pikeman 38.333 20
+unit pikeman 38.333 22
+unit pikeman 38.333 23
+unit pikeman 38.333 25
+unit pikeman 38.333 26
+unit pikeman 38.333 28
+unit pikeman 38.333 29
+unit pikeman 38.333 27
+unit pikeman 38.333 29
+##terrain##
+[[21, 21, 21, 21, 21, 21, 15, 15, 15, 15, 15, 15, 15, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 15, 15, 15], [21, 21, 21, 21, 21, 21, 15, 15, 15, 15, 15, 15, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 15, 15], [21, 21, 21, 21, 21, 21, 15, 15, 15, 15, 15, 15, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 15], [21, 21, 21, 21, 21, 21, 21, 15, 15, 15, 15, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 15], [21, 21, 21, 21, 21, 21, 21, 21, 15, 15, 15, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 15], [21, 21, 21, 21, 21, 21, 21, 21, 15, 15, 15, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 15, 15, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 27, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 27, 21], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 27, 27], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 27, 27], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 15, 15, 15, 15, 15, 21, 21, 21, 21, 27, 27], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 15, 12, 12, 12, 15, 15, 21, 21, 27, 34, 27], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 15, 12, 15, 15, 21, 21, 27, 27, 34, 27], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 25, 25, 25, 25, 25, 25, 21, 21, 15, 15, 15, 21, 21, 21, 27, 34, 34, 27], [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 27, 34, 34, 34, 34, 34, 34, 27, 21, 21, 21, 15, 21, 21, 27, 27, 34, 34, 27], [15, 21, 21, 21, 21, 21, 21, 21, 21, 27, 27, 34, 41, 41, 41, 41, 41, 34, 27, 21, 21, 21, 21, 21, 21, 27, 34, 34, 41, 34], [15, 15, 21, 21, 21, 21, 21, 21, 27, 27, 34, 34, 41, 41, 41, 41, 41, 34, 27, 27, 21, 21, 21, 21, 27, 27, 34, 34, 41, 34], [15, 15, 21, 21, 21, 21, 27, 27, 27, 34, 34, 59, 59, 59, 59, 59, 59, 41, 34, 27, 27, 21, 21, 27, 27, 34, 34, 34, 41, 41], [15, 15, 21, 21, 27, 27, 27, 34, 34, 34, 59, 59, 59, 59, 59, 59, 59, 41, 41, 34, 27, 27, 27, 27, 34, 34, 34, 41, 41, 41], [15, 15, 21, 27, 27, 34, 34, 34, 34, 34, 59, 59, 59, 59, 56, 56, 59, 59, 41, 41, 34, 27, 27, 34, 34, 41, 41, 41, 41, 41], [15, 21, 21, 27, 34, 34, 34, 34, 34, 34, 59, 59, 56, 56, 56, 56, 56, 59, 59, 41, 41, 34, 34, 41, 41, 41, 41, 41, 41, 59], [15, 21, 21, 27, 34, 34, 59, 59, 59, 59, 59, 59, 56, 56, 48, 48, 56, 56, 59, 41, 41, 41, 41, 41, 41, 41, 59, 59, 59, 59], [21, 21, 27, 27, 34, 34, 59, 59, 51, 51, 51, 51, 56, 48, 48, 48, 56, 56, 59, 41, 41, 41, 41, 41, 59, 59, 59, 59, 59, 51], [21, 21, 27, 34, 34, 59, 59, 51, 51, 51, 51, 51, 56, 56, 56, 56, 56, 56, 59, 59, 59, 59, 59, 59, 59, 59, 59, 51, 51, 51], [27, 27, 27, 34, 59, 59, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [27, 27, 34, 41, 59, 59, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [34, 34, 41, 41, 59, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [41, 41, 59, 59, 59, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [41, 59, 59, 59, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [41, 59, 56, 56, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [59, 59, 56, 56, 56, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [59, 56, 56, 56, 56, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [59, 56, 56, 56, 56, 56, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 56, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51], [59, 56, 56, 56, 56, 56, 56, 51, 51, 51, 51, 51, 51, 51, 51, 56, 56, 56, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

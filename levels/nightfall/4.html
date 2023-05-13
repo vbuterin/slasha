@@ -1,0 +1,79 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/nightfall/4.html"; next_location = "../../levels/nightfall/5.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+Having defeated the enemy army once again in the forest, you can now head straight for Nexenta. To save time, the army takes a shortcut through a valley. This will kill many of your men, but the alternative is getting there so late that their army will be already regrouped. You cannot afford to lose this battle. Good luck.
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1}
+darkknight {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier3.png','speed':0.1}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5}
+darkpikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman3.png','speed':0.1,'cmult':0.5}
+archer {'side':1,'aitype':1,'damage':8,'health':55,'range':50,'image':'Archer.png','speed':0.067,'bmult':2}
+warlock {'side':0,'aitype':0,'damage':12,'health':55,'range':50,'image':'Mage3.png','speed':0.067,'inacc':2}
+##events##
+setup 26.666 0 40 30
+unit darkpikeman 2.666 9.333 
+unit darkpikeman 2.666 10.666 
+unit darkpikeman 2.666 12 
+unit darkpikeman 2.666 5.333 
+unit darkpikeman 2.666 6.666 
+unit darkpikeman 2.666 8 
+unit warlock 2.666 1.333 
+unit warlock 2.666 2.666 
+unit warlock 2.666 4
+unit warlock 2.666 18 
+unit warlock 2.666 19.333 
+unit warlock 2.666 20.666 
+unit darkknight 2.666 22
+unit darkknight 2.666 23.333
+unit darkknight 2.666 24.666
+unit darkknight 2.666 26
+unit darkknight 2.666 27.333
+unit darkknight 2.666 28.666
+unit soldier 37.333 26
+unit soldier 37.333 27.333
+unit soldier 37.333 28.666
+unit pikeman 37.333 1.333 
+unit pikeman 37.333 2.666 
+unit pikeman 37.333 4 
+unit archer 37.333 13.666 
+unit archer 37.333 15 
+unit archer 37.333 16.333 
+whenever 50t320 do unit pikeman 38.666 1.333 
+whenever 50t320 do unit archer 38.666 15 
+whenever 50t320 do unit soldier 38.666 28.666
+##terrain##
+[[48, 48, 48, 40, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 30, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 40], [48, 48, 48, 40, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 30, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 40], [40, 48, 48, 40, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 25, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 40], [40, 48, 48, 48, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 25, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 40], [0, 0, 42, 48, 48, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 25, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 40], [0, 0, 42, 42, 48, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 25, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 40], [0, 0, 40, 42, 0, 0, 0, 0, 30, 30, 25, 25, 20, 10, 10, 20, 25, 0, 0, 0, 0, 0, 0, 35, 40, 40, 40, 40, 40, 40], [0, 0, 40, 0, 0, 0, 0, 0, 30, 30, 25, 25, 20, 10, 10, 20, 25, 0, 0, 0, 0, 0, 0, 35, 40, 40, 40, 40, 40, 40], [0, 0, 40, 0, 0, 0, 0, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 0, 0, 0, 0, 0, 35, 40, 40, 40, 40, 40, 40], [0, 0, 40, 40, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 30, 30, 30, 35, 0, 35, 40, 40, 40, 40, 40, 40], [0, 0, 0, 0, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 30, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 40], [0, 0, 0, 0, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 30, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 40], [0, 0, 0, 40, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 25, 30, 30, 35, 35, 35, 40, 40, 40, 40, 40, 0], [0, 0, 0, 40, 40, 40, 35, 0, 30, 0, 25, 25, 20, 10, 10, 25, 25, 25, 25, 30, 0, 0, 0, 0, 40, 40, 40, 40, 40, 0], [0, 0, 0, 40, 40, 40, 35, 0, 0, 0, 0, 25, 20, 10, 10, 25, 25, 25, 25, 30, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0], [0, 0, 0, 40, 40, 40, 35, 0, 0, 0, 0, 25, 20, 10, 10, 25, 25, 25, 25, 30, 30, 0, 0, 0, 0, 48, 48, 48, 0, 0], [0, 0, 0, 40, 40, 40, 35, 0, 0, 0, 0, 0, 20, 10, 10, 25, 25, 25, 25, 30, 30, 35, 35, 0, 0, 0, 40, 0, 0, 0], [0, 0, 0, 40, 40, 40, 35, 0, 0, 0, 0, 0, 0, 10, 10, 25, 25, 25, 25, 30, 30, 35, 35, 35, 35, 0, 40, 0, 0, 0], [0, 0, 0, 40, 40, 40, 35, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 30, 35, 35, 35, 35, 0, 40, 0, 0, 0], [0, 0, 0, 40, 40, 40, 35, 35, 30, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 30, 35, 35, 35, 35, 48, 40, 0, 0, 0], [0, 0, 0, 40, 40, 40, 35, 35, 30, 30, 25, 25, 0, 0, 0, 0, 0, 0, 0, 30, 30, 35, 35, 35, 35, 48, 0, 0, 0, 0], [0, 0, 0, 40, 40, 40, 40, 35, 30, 30, 25, 25, 0, 0, 10, 25, 25, 25, 30, 30, 30, 35, 35, 35, 40, 48, 0, 0, 0, 0], [0, 0, 40, 40, 40, 40, 40, 35, 30, 30, 25, 25, 0, 0, 10, 20, 25, 25, 30, 30, 30, 35, 35, 35, 40, 40, 0, 0, 0, 0], [0, 40, 40, 40, 40, 40, 40, 35, 30, 30, 25, 25, 20, 0, 10, 20, 25, 25, 30, 30, 30, 35, 35, 35, 35, 40, 40, 0, 0, 0], [48, 40, 40, 40, 40, 40, 35, 35, 30, 30, 25, 25, 20, 0, 10, 20, 25, 25, 30, 30, 0, 0, 0, 0, 35, 40, 40, 0, 0, 0], [48, 40, 40, 40, 40, 40, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 30, 30, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0], [48, 40, 40, 40, 40, 0, 35, 35, 30, 30, 25, 25, 20, 10, 10, 20, 25, 25, 25, 0, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0], [48, 40, 40, 40, 40, 0, 0, 0, 30, 30, 25, 25, 20, 10, 10, 20, 20, 25, 25, 25, 30, 30, 35, 35, 35, 40, 40, 0, 0, 0], [48, 40, 40, 40, 40, 0, 0, 0, 30, 30, 25, 25, 20, 10, 10, 20, 20, 25, 25, 25, 30, 30, 35, 35, 35, 40, 40, 0, 0, 0], [48, 40, 40, 40, 40, 0, 0, 0, 0, 25, 25, 20, 20, 20, 8, 8, 20, 25, 25, 25, 30, 30, 35, 35, 35, 40, 40, 0, 0, 0], [48, 40, 40, 40, 40, 40, 0, 0, 0, 25, 25, 20, 20, 20, 8, 8, 0, 0, 0, 0, 0, 0, 35, 35, 35, 40, 40, 0, 0, 0], [48, 40, 40, 40, 40, 40, 35, 0, 0, 25, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 35, 35, 40, 40, 0, 0, 0], [0, 40, 40, 40, 40, 35, 30, 30, 0, 0, 0, 20, 20, 20, 8, 8, 20, 20, 0, 0, 25, 0, 0, 35, 35, 40, 40, 48, 0, 0], [0, 0, 48, 48, 48, 35, 30, 30, 0, 0, 20, 20, 20, 20, 8, 8, 20, 20, 20, 25, 25, 30, 30, 35, 35, 40, 40, 48, 0, 0], [0, 0, 0, 0, 48, 35, 30, 30, 25, 25, 20, 20, 20, 8, 8, 8, 20, 20, 20, 25, 25, 30, 30, 35, 35, 40, 40, 48, 48, 48], [0, 0, 0, 0, 48, 35, 30, 30, 25, 25, 20, 20, 20, 8, 8, 8, 20, 20, 20, 25, 25, 25, 30, 35, 35, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 35, 30, 30, 25, 25, 20, 20, 20, 8, 8, 8, 20, 20, 20, 25, 25, 25, 30, 30, 35, 35, 40, 40, 40, 40], [40, 40, 40, 40, 40, 35, 30, 25, 25, 25, 20, 20, 8, 8, 8, 8, 20, 20, 20, 25, 25, 25, 30, 30, 35, 35, 40, 40, 40, 40], [40, 40, 40, 40, 40, 30, 30, 25, 25, 25, 20, 20, 20, 8, 8, 8, 20, 20, 20, 25, 25, 25, 30, 30, 30, 35, 35, 40, 40, 40], [40, 40, 40, 40, 35, 30, 30, 25, 25, 25, 20, 20, 8, 8, 8, 8, 20, 20, 20, 25, 25, 25, 30, 30, 30, 35, 35, 40, 40, 40]]
+</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

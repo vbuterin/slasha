@@ -1,0 +1,123 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/rebellion/14.html"; next_location = "../../levels/rebellion/15.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+The tunnel ends abruptly with five inactive burrowing demons. The tunnel looks many years old, but the last eighty meters are fresh. Madrina's settlement of Nexenta must have temporarily reactivated them like it did the golems. You slice the demons in half to finish them for good and start digging up. After four meters, there is an avalanche of rock. Your men move back, and when the rocks stop falling you look up. You have broken into a basement. You move in quickly and sneak through the city. A large number of people are willing to fight with you and a large number of soldiers desert. The civil war has begun...
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.06}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.06}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.06,'cmult':0.5}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.06,'cmult':0.5}
+##events##
+unit enemypikeman 15 11 c$0.5
+unit enemysoldier 17 11
+unit enemypikeman 19 11 c$0.5
+unit enemysoldier 21 11
+unit enemypikeman 23 11 c$0.5
+unit enemysoldier 25 11
+unit enemypikeman 15 13 c$0.5
+unit enemysoldier 17 13
+unit enemypikeman 19 13 c$0.5
+unit enemysoldier 21 13
+unit enemypikeman 23 13 c$0.5
+unit enemysoldier 25 13
+unit enemypikeman 15 15 c$0.5
+unit enemysoldier 17 15
+unit enemypikeman 23 15 c$0.5
+unit enemysoldier 25 15
+unit enemypikeman 15 17 c$0.5
+unit enemysoldier 17 17
+unit enemypikeman 19 17 c$0.5
+unit enemysoldier 21 17
+unit enemypikeman 23 17 c$0.5
+unit enemysoldier 25 17
+unit enemypikeman 15 19 c$0.5
+unit enemysoldier 17 19
+unit enemypikeman 19 19 c$0.5
+unit enemysoldier 21 19
+unit enemypikeman 23 19 c$0.5
+unit enemysoldier 25 19
+unit enemypikeman 1.333 13.6 c$0.5
+unit enemysoldier 2.666 13.6
+unit enemysoldier 1.333 14.933
+unit enemypikeman 2.666 14.933 c$0.5
+unit enemypikeman 1.333 16.266 c$0.5
+unit enemysoldier 2.666 16.266
+unit enemypikeman 1.333 17.6 c$0.5
+unit enemysoldier 2.666 17.6
+unit enemysoldier 34.533 10.666
+unit enemypikeman 35.533 10.666 c$0.5
+unit enemysoldier 34.533 12
+unit enemypikeman 35.533 12 c$0.5
+unit enemysoldier 34.533 13.333
+unit enemypikeman 35.533 13.333 c$0.5
+unit soldier 8 24
+unit pikeman 9.333 24 c$0.5
+unit soldier 10.666 24
+unit pikeman 8 25.333 c$0.5
+unit soldier 9.333 25.333
+unit pikeman 10.666 25.333 c$0.5
+unit soldier 8 26.666
+unit pikeman 9.333 26.666 c$0.5
+unit soldier 10.666 26.666
+unit soldier 35.333 5.333
+unit pikeman 36.666 5.333 c$0.5
+unit soldier 38 5.333
+unit pikeman 35.333 6.666 c$0.5
+unit soldier 36.666 6.666
+unit pikeman 38 6.666 c$0.5
+unit soldier 35.333 8
+unit pikeman 36.666 8 c$0.5
+unit soldier 38 8
+unit soldier 1.333 1.333
+unit pikeman 2.666 1.333 c$0.5
+unit soldier 4 1.333
+unit pikeman 1.333 2.666 c$0.5
+unit soldier 2.666 2.666
+unit pikeman 4 2.666 c$0.5
+unit soldier 1.333 4
+unit pikeman 2.666 4 c$0.5
+unit soldier 4 4
+unit soldier 36 26
+unit pikeman 37.333 26 c$0.5
+unit soldier 38.666 26
+unit pikeman 36 27.333 c$0.5
+unit soldier 37.333 27.333
+unit pikeman 38.666 27.333 c$0.5
+unit soldier 36 28.666
+unit pikeman 37.333 28.666 c$0.5
+unit soldier 38.666 28.666
+##terrain##
+[[40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40], [40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40], [40, 0, 0, 0, 40, 0, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40], [40, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40], [40, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 0, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 0, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 0, 40, 0, 40, 40, 40, 40, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 40, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 40, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 46, 46, 0, 0, 0, 0, 0, 0, 46, 46, 46, 0, 0, 0, 0, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 0, 0, 0, 40, 40, 46, 46, 0, 0, 0, 0, 0, 0, 46, 46, 46, 0, 0, 0, 0, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 46, 46, 0, 0, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 46, 46, 0, 0, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 46, 46, 0, 0, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 46, 46, 0, 0, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 0, 0, 46, 46, 40, 40, 0, 40, 40], [40, 40, 40, 40, 40, 40, 46, 46, 46, 46, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 46, 46, 46, 46, 40, 40, 0, 40, 40], [40, 40, 40, 40, 40, 40, 46, 46, 46, 46, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 46, 46, 46, 46, 40, 40, 0, 40, 40], [40, 40, 40, 40, 40, 40, 46, 46, 46, 46, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 46, 46, 46, 46, 40, 40, 0, 40, 40], [40, 40, 40, 40, 40, 40, 46, 46, 46, 46, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 46, 46, 46, 46, 40, 40, 0, 40, 40], [40, 40, 40, 0, 40, 40, 46, 46, 0, 0, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 0, 0, 46, 46, 40, 40, 0, 40, 40], [40, 40, 40, 0, 40, 40, 46, 46, 0, 0, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 46, 46, 0, 0, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 46, 46, 0, 0, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 46, 46, 0, 0, 0, 0, 0, 0, 46, 46, 46, 0, 0, 0, 0, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 0, 0, 0, 40, 40, 46, 46, 0, 0, 0, 0, 0, 0, 46, 46, 46, 0, 0, 0, 0, 0, 0, 46, 46, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40], [40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 40, 40], [40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40], [40, 0, 0, 0, 40, 40, 40, 40, 40, 0, 40, 40, 0, 0, 0, 0, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

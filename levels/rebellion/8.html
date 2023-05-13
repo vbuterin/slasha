@@ -1,0 +1,159 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/rebellion/8.html"; next_location = "../../levels/rebellion/9.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+Their offensive is turned back but it may succeed at other parts of the border. The remainder of your army and that of Hymera's head east to attack the enemy forces there. But when you're halfway there, you get ambushed...
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.08}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.08}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.08,'cmult':0.5}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.08,'cmult':0.5}
+##events##
+unit enemysoldier 5 2
+unit enemysoldier 7 2
+unit enemysoldier 9 2
+unit enemysoldier 11 2
+unit enemysoldier 13 2
+unit enemysoldier 15 2
+unit enemysoldier 17 2
+unit enemysoldier 19 2
+unit enemysoldier 23 2
+unit enemysoldier 25 2
+unit enemysoldier 27 2
+unit enemysoldier 29 2
+unit enemysoldier 31 2
+unit enemysoldier 33 2
+unit enemysoldier 35 2
+unit enemypikeman 5 1 c$0.5
+unit enemypikeman 7 1 c$0.5
+unit enemypikeman 9 1 c$0.5
+unit enemypikeman 11 1 c$0.5
+unit enemypikeman 13 1 c$0.5
+unit enemypikeman 15 1 c$0.5
+unit enemypikeman 17 1 c$0.5
+unit enemypikeman 19 1 c$0.5
+unit enemypikeman 23 1 c$0.5
+unit enemypikeman 25 1 c$0.5
+unit enemypikeman 27 1 c$0.5
+unit enemypikeman 29 1 c$0.5
+unit enemypikeman 31 1 c$0.5
+unit enemypikeman 33 1 c$0.5
+unit enemypikeman 35 1 c$0.5
+unit enemysoldier 5 28
+unit enemysoldier 7 28
+unit enemysoldier 9 28
+unit enemysoldier 11 28
+unit enemysoldier 13 28
+unit enemysoldier 15 28
+unit enemysoldier 17 28
+unit enemysoldier 19 28
+unit enemysoldier 23 28
+unit enemysoldier 25 28
+unit enemysoldier 27 28
+unit enemysoldier 29 28
+unit enemysoldier 31 28
+unit enemysoldier 33 28
+unit enemysoldier 35 28
+unit enemypikeman 5 29 c$0.5
+unit enemypikeman 7 29 c$0.5
+unit enemypikeman 9 29 c$0.5
+unit enemypikeman 11 29 c$0.5
+unit enemypikeman 13 29 c$0.5
+unit enemypikeman 15 29 c$0.5
+unit enemypikeman 17 29 c$0.5
+unit enemypikeman 19 29 c$0.5
+unit enemypikeman 23 29 c$0.5
+unit enemypikeman 25 29 c$0.5
+unit enemypikeman 27 29 c$0.5
+unit enemypikeman 29 29 c$0.5
+unit enemypikeman 31 29 c$0.5
+unit enemypikeman 33 29 c$0.5
+unit enemypikeman 35 29 c$0.5
+unit soldier 7 14
+unit soldier 8.5 14
+unit soldier 10 14
+unit soldier 11.5 14
+unit soldier 13 14
+unit soldier 14.5 14
+unit soldier 16 14
+unit soldier 17.5 14
+unit soldier 19 14
+unit soldier 21 14
+unit soldier 22.5 14
+unit soldier 24 14
+unit soldier 25.5 14
+unit soldier 27 14
+unit soldier 28.5 14
+unit soldier 30 14
+unit soldier 31.5 14
+unit soldier 33 14
+unit pikeman 7 15 c$0.5
+unit pikeman 8.5 15 c$0.5
+unit pikeman 10 15 c$0.5
+unit pikeman 11.5 15 c$0.5
+unit pikeman 13 15 c$0.5
+unit pikeman 14.5 15 c$0.5
+unit pikeman 16 15 c$0.5
+unit pikeman 17.5 15 c$0.5
+unit pikeman 19 15 c$0.5
+unit pikeman 21 15 c$0.5
+unit pikeman 22.5 15 c$0.5
+unit pikeman 24 15 c$0.5
+unit pikeman 25.5 15 c$0.5
+unit pikeman 27 15 c$0.5
+unit pikeman 28.5 15 c$0.5
+unit pikeman 30 15 c$0.5
+unit pikeman 31.5 15 c$0.5
+unit pikeman 33 15 c$0.5
+unit pikeman 7 16 c$0.5
+unit pikeman 8.5 16 c$0.5
+unit pikeman 10 16 c$0.5
+unit pikeman 11.5 16 c$0.5
+unit pikeman 13 16 c$0.5
+unit pikeman 14.5 16 c$0.5
+unit pikeman 16 16 c$0.5
+unit pikeman 17.5 16 c$0.5
+unit pikeman 19 16 c$0.5
+unit pikeman 21 16 c$0.5
+unit pikeman 22.5 16 c$0.5
+unit pikeman 24 16 c$0.5
+unit pikeman 25.5 16 c$0.5
+unit pikeman 27 16 c$0.5
+unit pikeman 28.5 16 c$0.5
+unit pikeman 30 16 c$0.5
+unit pikeman 31.5 16 c$0.5
+unit pikeman 33 16 c$0.5
+##terrain##
+[[57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 0, 0, 0, 0, 0, 48, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 0, 0, 0, 0, 0, 48, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 0, 0, 0, 0, 0, 48, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 0, 0, 0, 0, 0, 0, 48, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 0, 0, 0, 0, 0, 0, 48, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 0, 0, 0, 0, 0, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 0, 0, 0, 0, 0, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 0, 0, 0, 0, 0, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 0, 0, 0, 0, 0, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 0, 0, 0, 0, 0, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 0, 0, 0, 0, 0, 0, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 0, 0, 0, 0, 0, 0, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 0, 0, 0, 0, 0, 0, 52, 55, 56, 57], [57, 56, 55, 52, 0, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 0, 0, 0, 0, 0, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 0, 0, 0, 0, 0, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 0, 0, 0, 0, 0, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57], [57, 56, 55, 52, 48, 48, 44, 40, 32, 29, 26, 22, 17, 11, 4, 4, 11, 17, 22, 26, 29, 32, 40, 44, 48, 48, 52, 55, 56, 57]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

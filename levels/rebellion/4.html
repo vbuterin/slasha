@@ -1,0 +1,145 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/rebellion/4.html"; next_location = "../../levels/rebellion/5.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+You look at Centos's dead body. In his eyes, you see that the soul isn't there - the eyes are white. In the zombies your grandfather had told you of, the soul is still inside - it could only be removed by burning the body or by demonic extraction magic. What demon could Centos's poor sould be unwillingly feeding now? Regardless, your men make it to the village of Moblia, where a rebellion has already taken control. Only now did the forces of Madrina find out...
+##classes##
+soldier {'side':1,'aitype':1,'damage':8,'health':125,'range':1.6,'image':'Soldier.png','speed':0.1}
+archer {'side':1,'aitype':1,'damage':8,'health':50,'range':50,'image':'Archer.png','speed':0.067,'inacc':2}
+zombie {'side':0,'aitype':0,'damage':6,'health':60,'range':1.6,'image':'Zombie.png','speed':0.1}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5}
+##events##
+setup 10 6.666 30 23.333
+unit zombie 1.333 1
+unit zombie 1.333 3
+unit zombie 1.333 5
+unit zombie 1.333 7
+unit zombie 1.333 9
+unit zombie 1.333 11
+unit zombie 1.333 13
+unit zombie 1.333 15
+unit zombie 1.333 17
+unit zombie 1.333 19
+unit zombie 1.333 21
+unit zombie 1.333 23
+unit zombie 1.333 25
+unit zombie 1.333 27
+unit zombie 1.333 29
+unit zombie 2.666 1
+unit zombie 2.666 3
+unit zombie 2.666 5
+unit zombie 2.666 7
+unit zombie 2.666 9
+unit zombie 2.666 11
+unit zombie 2.666 13
+unit zombie 2.666 15
+unit zombie 2.666 17
+unit zombie 2.666 19
+unit zombie 2.666 21
+unit zombie 2.666 23
+unit zombie 2.666 25
+unit zombie 2.666 27
+unit zombie 2.666 29
+whenever 160t do unit zombie 38.666 1
+whenever 160t do unit zombie 38.666 3
+whenever 160t do unit zombie 38.666 5
+whenever 160t do unit zombie 38.666 7
+whenever 160t do unit zombie 38.666 9
+whenever 160t do unit zombie 38.666 11
+whenever 160t do unit zombie 38.666 13
+whenever 160t do unit zombie 38.666 15
+whenever 160t do unit zombie 38.666 17
+whenever 160t do unit zombie 38.666 19
+whenever 160t do unit zombie 38.666 21
+whenever 160t do unit zombie 38.666 23
+whenever 160t do unit zombie 38.666 25
+whenever 160t do unit zombie 38.666 27
+whenever 160t do unit zombie 38.666 29
+whenever 160t do unit zombie 37.333 1
+whenever 160t do unit zombie 37.333 3
+whenever 160t do unit zombie 37.333 5
+whenever 160t do unit zombie 37.333 7
+whenever 160t do unit zombie 37.333 9
+whenever 160t do unit zombie 37.333 11
+whenever 160t do unit zombie 37.333 13
+whenever 160t do unit zombie 37.333 15
+whenever 160t do unit zombie 37.333 17
+whenever 160t do unit zombie 37.333 19
+whenever 160t do unit zombie 37.333 21
+whenever 160t do unit zombie 37.333 23
+whenever 160t do unit zombie 37.333 25
+whenever 160t do unit zombie 37.333 27
+whenever 160t do unit zombie 37.333 29
+whenever 640t do unit zombie 1.333 1.333
+whenever 640t do unit zombie 4 1.333
+whenever 640t do unit zombie 6.666 1.333
+whenever 640t do unit zombie 9.333 1.333
+whenever 640t do unit zombie 12 1.333
+whenever 640t do unit zombie 14.666 1.333
+whenever 640t do unit zombie 17.333 1.333
+whenever 640t do unit zombie 20 1.333
+whenever 640t do unit zombie 22.666 1.333
+whenever 640t do unit zombie 25.333 1.333
+whenever 640t do unit zombie 28 1.333
+whenever 640t do unit zombie 30.666 1.333
+whenever 640t do unit zombie 33.333 1.333
+whenever 640t do unit zombie 36 1.333
+whenever 640t do unit zombie 38.666 1.333
+unit soldier 16.666 10
+unit soldier 16.666 11.333
+unit soldier 16.666 12.666
+unit soldier 16.666 14
+unit soldier 16.666 15.333
+unit soldier 16.666 16.666
+unit soldier 16.666 18
+unit soldier 16.666 19.333
+unit pikeman 18 10 c$0.5
+unit pikeman 18 11.333 c$0.5
+unit pikeman 18 12.666 c$0.5
+unit pikeman 18 14 c$0.5
+unit pikeman 18 15.333 c$0.5
+unit pikeman 18 16.666 c$0.5
+unit pikeman 18 18 c$0.5
+unit pikeman 18 19.333 c$0.5
+unit archer 19.333 10 b$0.95
+unit archer 19.333 11.333 b$0.95
+unit archer 19.333 12.666 b$0.95
+unit archer 19.333 14 b$0.95
+unit archer 19.333 15.333 b$0.95
+unit archer 19.333 16.666 b$0.95
+unit archer 19.333 18 b$0.95
+unit archer 19.333 19.333 b$0.95
+##terrain##
+[[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20], [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

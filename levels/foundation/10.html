@@ -1,0 +1,117 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/foundation/10.html"; next_location = "../../levels/foundation/11.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+Hundreds of enemies and many golems lie dead before you. However, the enemy king approaches, and you need to defeat him too...
+##classes##
+zerker {'side':1,'aitype':1,'damage':11,'health':90,'range':1.6,'image':'Soldier.png','speed':0.1}
+guardian {'side':1,'aitype':1,'damage':6,'health':150,'range':1.6,'image':'Soldier.png','speed':0.075}
+pikeman {'side':1,'aitype':1,'damage':8,'health':70,'range':2.5,'image':'Pikeman.png','speed':0.1,'cmult':0.5}
+horseman {'side':1,'aitype':1,'damage':11,'health':75,'range':2.5,'image':'Horseman.png','speed':0.2,'cmult':1,'bmult':0.5}
+enemysoldier {'side':0,'aitype':0,'damage':8,'health':125,'range':1.6,'image':'Soldier2.png','speed':0.1}
+enemypikeman {'side':0,'aitype':0,'damage':8,'health':70,'range':2.5,'image':'Pikeman2.png','speed':0.1,'cmult':0.5}
+enemyarcher {'side':0,'aitype':0,'damage':6,'health':25,'range':50,'image':'Archer2.png','speed':0.05,'inacc':2}
+golem {'side':0,'aitype':0,'damage':30,'health':300,'range':4,'image':'Golem.png','speed':0.06}
+boss {'side':0,'aitype':0,'damage':40,'health':7200,'range':2.66,'image':'Boss2.png','speed':0.12,'desc':'boss'}
+##events##
+setup 10 10 30 30
+unit boss 20 3.333
+when none $boss do win
+whenever 250t1500 do unit enemyarcher 37 9
+whenever 250t1500 do unit enemyarcher 37 12
+whenever 250t1500 do unit enemyarcher 37 15
+whenever 250t1500 do unit enemyarcher 37 18
+whenever 250t1500 do unit enemyarcher 37 21
+whenever 625t1500 do unit enemyarcher 3 9
+whenever 625t1500 do unit enemyarcher 3 12
+whenever 625t1500 do unit enemyarcher 3 15
+whenever 625t1500 do unit enemyarcher 3 18
+whenever 625t1500 do unit enemyarcher 3 21
+whenever 1000t1500 do unit enemyarcher 14 3
+whenever 1000t1500 do unit enemyarcher 17 3
+whenever 1000t1500 do unit enemyarcher 20 3
+whenever 1000t1500 do unit enemyarcher 23 3
+whenever 1000t1500 do unit enemyarcher 26 3
+whenever 1000t2000 $boss 0h4000 do unit golem 6 6
+whenever 2000t2000 $boss 0h4000 do unit golem 34 6
+whenever 1500t1500 $boss 0h2700 do unit golem 20 3
+whenever 300t1500 $boss 0h2000 do unit golem 3 12
+whenever 1200t1500 $boss 0h2000 do unit golem 37 12
+whenever 250t1000 $boss 0h1600 do unit golem 3 24
+whenever 750t1000 $boss 0h1600 do unit golem 37 24
+whenever 80t80 $boss 0h1400 do unit enemyarcher 1.5 8.5
+whenever 80t80 $boss 0h1400 do unit enemyarcher 38.5 8.5
+whenever 80t80 $boss 0h1200 do unit enemyarcher 1.5 15.5
+whenever 80t80 $boss 0h1200 do unit enemyarcher 38.5 15.5
+whenever 80t80 $boss 0h1000 do unit enemyarcher 1.5 22.5
+whenever 80t80 $boss 0h1000 do unit enemyarcher 38.5 22.5
+whenever 80t80 $boss 0h800 do unit enemyarcher 1.5 29.5
+whenever 80t80 $boss 0h800 do unit enemyarcher 38.5 29.5
+unit guardian 18.466 26.666
+unit guardian 20.666 26.666
+unit zerker 19.466 26.666
+unit zerker 21.466 26.666
+unit pikeman 18.466 27.666
+unit pikeman 19.466 27.666
+unit pikeman 20.533 27.666
+unit pikeman 21.466 27.666
+unit pikeman 18.466 28.666
+unit pikeman 19.466 28.666
+unit pikeman 20.533 28.666
+unit pikeman 21.466 28.666
+whenever 160t800 do unit guardian 18.466 26.666
+whenever 160t800 do unit guardian 19.466 26.666
+whenever 160t800 do unit guardian 20.466 26.666
+whenever 160t800 do unit guardian 21.466 26.666
+whenever 320t800 do unit pikeman 18.466 27.666
+whenever 320t800 do unit pikeman 19.466 27.666
+whenever 320t800 do unit pikeman 20.466 27.666
+whenever 320t800 do unit pikeman 21.466 27.666
+whenever 640t800 do unit zerker 18.466 26.666
+whenever 640t800 do unit zerker 19.466 26.666
+whenever 640t800 do unit zerker 20.466 26.666
+whenever 640t800 do unit zerker 21.466 26.666
+whenever 800t800 do unit pikeman 18.466 28.666
+whenever 800t800 do unit pikeman 19.466 28.666
+whenever 800t800 do unit pikeman 20.533 28.666
+whenever 800t800 do unit pikeman 21.466 28.666
+whenever 480t800 do unit horseman 19 27.466
+whenever 480t800 do unit horseman 20 27.466
+whenever 480t800 do unit horseman 21 27.466
+whenever 480t800 do unit horseman 19 28.466
+whenever 480t800 do unit horseman 20 28.466
+whenever 480t800 do unit horseman 21 28.466
+##terrain##
+[[40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 0], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 40, 40, 0, 0], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 40, 40, 40, 0, 0, 0, 0, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40], [40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40], [40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 40], [40, 40, 0, 0, 0, 0, 0, 0, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40], [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40]]</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>

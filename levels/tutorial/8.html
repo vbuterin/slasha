@@ -1,0 +1,60 @@
+<head>
+   <title>Slasha</title>
+   <script type="text/javascript" src="../../javascript/menu.js"></script>
+   <script type="text/javascript" src="../../javascript/package.js"></script>
+   <script type="text/javascript">minloss = [0,'me'];
+maxratio = [999,'me'];
+mintime = [0,'me'];
+minrt = [0,'rt'];
+edit_status = 'CANNOT';start_time = -1;
+campaign = 'tutorial';
+counter = 0;
+</script>
+   <script type="text/javascript" src="../../javascript/main.js"></script>
+   <script type="text/javascript">current_location = "../../levels/tutorial/8.html"; next_location = "../../levels/tutorial/9.html";</script>
+   <style type="text/css">
+      body { font-family: Arial,Helvetica,sans-serif;}
+   </style>
+</head>
+<body oncontextmenu="return false;">
+  <table><tr><td>
+  <canvas id="canvas" width="600" height="500" style.display="inline"></canvas>
+  </td><td>
+  <form id="next" action="" style.display="inline" method="get">
+    <div><textarea name="data" cols="45" rows="30">##story##
+Archers and catapults can aim the direction of their fire well, but are not necessarily as good at gauging distance. Thus, they are far more effective when they and their target units are lined up. Here, place and maneuver the units so that the friendly catapult is flanking the battle line and can deal maximum damage.
+##classes##
+Soldier {"side":1,"aitype":1,"damage":3,"health":150,"range":1.6,"image":"Guardian.png","speed":0.1,"desc":"","cmult":0.75,"bmult":0.6,"inacc":0}
+EnemySoldier {"side":0,"aitype":0,"damage":5,"health":225,"range":1.6,"image":"Guardian2.png","speed":0.1,"desc":"","cmult":0.75,"bmult":0.6,"inacc":0}
+Catapult {"side":1,"aitype":0,"damage":29,"health":30,"range":50,"image":"Catapult.png","speed":0,"desc":"","cmult":0.75,"bmult":0.6,"inacc":3}
+##events##
+unit Catapult 28.867 20.000
+unit Soldier 22.5 19.5
+unit Soldier 24.5 17.5
+unit Soldier 23.5 18.5
+unit Soldier 24.5 16.5
+unit Soldier 22.5 17.5
+unit Soldier 20.5 18.5
+unit EnemySoldier 11.5 10.5
+unit EnemySoldier 13.5 8.5
+unit EnemySoldier 12.5 9.5
+unit EnemySoldier 12.5 8.5
+unit EnemySoldier 11.5 8.5
+unit EnemySoldier 10.5 11.5
+unit EnemySoldier 14.5 8.5
+setup 9 16 31 22
+##terrain##
+[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,32,32,32,32,32,32,32,32,32,32,32,32,32,32,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+</textarea></div>
+    <div><textarea name="info"></textarea></div>
+    <div><textarea name="score"></textarea></div>
+  </form>
+  <form id="edit" action="/edit" style.display="inline" method="post">
+    <div><textarea name="message"></textarea></div>
+  </form>
+  </td></tr></table>
+  <form id="startscreen" action="/startscreen" method="post">
+    <div><textarea name="campaign" cols="45" rows="5"></textarea></div>
+    <div id="ctrlreminder"><b>Reminder: Ctrl+A to select all, Ctrl+C to copy</b></div>
+  </form>
+</body>
